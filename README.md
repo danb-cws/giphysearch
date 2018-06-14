@@ -1,3 +1,14 @@
+#Giphysearch... 
+
+This a learning demo project by Dan Brown, allows you to search the Giphy API.
+
+Started from default Create React App, uses Firebase for hosting: https://giphysearch-danb.firebaseapp.com/
+
+Currently using the open beta API key which still seems to work, and removes the need to protect the key in some way.
+
+
+CRA blurb follows:
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
