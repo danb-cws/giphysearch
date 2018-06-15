@@ -1,12 +1,17 @@
-import React from 'react';
+import React from "react";
 
-const ResultListItem = ({gif}) => {
+const ResultListItem = ({ gif }) => {
   return (
     <li>
-      {gif.title}<br/>
-      <img src={gif.images.original.url} alt={gif.title} height="100"/>
+      <h5>{gif.title}</h5>
+      <img
+        src={gif.images.fixed_height_small.url}
+        width={gif.images.fixed_height_small.width}
+        height={gif.images.fixed_height_small.height}
+        alt={gif.title}
+      />
     </li>
-  )
+  );
 };
 
 export default ResultListItem;
