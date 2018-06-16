@@ -32,7 +32,7 @@ class App extends Component {
       .then(json => {
         return json.data;
       })
-      .then(gifs => this.setState({ gifs }))
+      .then(gifs => this.setState({ gifs, selectedItem: 0 }))
       .catch(error => console.error(error));
   }
 
