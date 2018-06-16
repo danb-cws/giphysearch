@@ -2,8 +2,8 @@ import React from "react";
 
 const Player = props => {
   const mainGif = props.gifs[props.selectedItem];
-  if (!mainGif){
-    return <div>Loading...</div>
+  if (!mainGif) {
+    return <div>Loading...</div>;
   }
   return (
     <div>

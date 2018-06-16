@@ -8,12 +8,15 @@ import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { gifs: [], selectedItem: 0 };
+    this.state = {
+      gifs: [],
+      selectedItem: 0
+    };
 
-    this.GiphySearchHandler();
+    this.giphySearchHandler();
   }
 
-  GiphySearchHandler(term = config.default_term) {
+  giphySearchHandler(term = config.default_term) {
     return fetch(
       `${config.GIPHY_ENDPOINT}${encodeURI(term)}&api_key=${
         config.GIPHY_API_KEY
@@ -40,9 +43,9 @@ class App extends Component {
           <h1 className="App-title">Giphysearch, a React Demo by Dan B</h1>
         </header>
         <Search
-          onSearchTermChange={searchTerm => this.GiphySearchHandler(searchTerm)}
+          onSearchTermChange={searchTerm => this.giphySearchHandler(searchTerm)}
         />
-        <ResultList gifs={this.state.gifs} />
+        <ResultList gifs={this.state.gifs} onItemSelect={index => this.setState({selectedItem: index})} />
         <Player gifs={this.state.gifs} selectedItem={this.state.selectedItem} />
       </div>
     );
