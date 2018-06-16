@@ -5,9 +5,9 @@ const ResultListItem = ({ gif }) => {
     <li>
       <h5>{gif.title}</h5>
       <img
-        src={gif.images.fixed_height_small.url}
-        width={gif.images.fixed_height_small.width}
-        height={gif.images.fixed_height_small.height}
+        src={gif.images.fixed_height_small_still.url}
+        width={gif.images.fixed_height_small_still.width}
+        height={gif.images.fixed_height_small_still.height}
         alt={gif.title}
       />
     </li>

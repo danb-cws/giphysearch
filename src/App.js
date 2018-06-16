@@ -8,7 +8,7 @@ import "./App.css";
 class App extends Component {
   constructor(props) {
     super(props);
-    this.state = { gifs: [] };
+    this.state = { gifs: [], selectedItem: 0 };
 
     this.GiphySearchHandler();
   }
@@ -43,7 +43,7 @@ class App extends Component {
           onSearchTermChange={searchTerm => this.GiphySearchHandler(searchTerm)}
         />
         <ResultList gifs={this.state.gifs} />
-        <Player />
+        <Player gifs={this.state.gifs} selectedItem={this.state.selectedItem} />
       </div>
     );
   }
