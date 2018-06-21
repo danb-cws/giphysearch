@@ -5,10 +5,11 @@ const Player = props => {
   if (!mainGif) {
     return <div>Loading...</div>;
   }
+
   return (
     <div>
-      <p>{props.selectedItem}</p>
       <img
+        className="PlayerImg"
         src={mainGif.images.original.url}
         width={mainGif.images.original.width}
         height={mainGif.images.original.height}

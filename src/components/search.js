@@ -1,25 +1,26 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import * as config from "../config";
 
-
 class Search extends Component {
-
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state = {searchTerm: config.default_term};
+    this.state = { searchTerm: config.default_term };
   }
 
   render() {
     return (
-        <input value={this.state.searchTerm} onChange={e =>this.onInputChange(e.target.value)} />
-    )
+      <input
+        className="SearchInput"
+        value={this.state.searchTerm}
+        onChange={e => this.onInputChange(e.target.value)}
+      />
+    );
   }
 
   onInputChange = searchTerm => {
-    this.setState({searchTerm});
+    this.setState({ searchTerm });
     this.props.onSearchTermChange(searchTerm);
-  }
-
+  };
 }
 
 export default Search;
