@@ -9,10 +9,10 @@ const Player = props => {
   return (
     <div>
       <img
-        className="PlayerImg"
+        className={`PlayerImg ${(mainGif.images.original.width / mainGif.images.original.height) < 1 ? 'portrait' : 'landscape'}`}
         src={mainGif.images.original.url}
-        width={mainGif.images.original.width}
-        height={mainGif.images.original.height}
+        // width={mainGif.images.original.width}
+        // height={mainGif.images.original.height}
         alt={mainGif.title}
       />
     </div>
