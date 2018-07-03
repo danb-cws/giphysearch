@@ -1,8 +1,11 @@
 import React from "react";
 
-const ResultListItem = ({ gif, index, onItemSelect }) => {
+const ResultListItem = ({ gif, selectedItem, index, onItemSelect }) => {
   return (
     <li
+      className={
+        selectedItem === index ? 'selected-item' : ''
+      }
       onClick={() => {
         onItemSelect(index);
       }}

@@ -45,7 +45,11 @@ class App extends Component {
         <Search
           onSearchTermChange={searchTerm => this.giphySearchHandler(searchTerm)}
         />
-        <ResultList gifs={this.state.gifs} onItemSelect={index => this.setState({selectedItem: index})} />
+        <ResultList
+          gifs={this.state.gifs}
+          selectedItem={this.state.selectedItem}
+          onItemSelect={index => this.setState({ selectedItem: index })}
+        />
         <Player gifs={this.state.gifs} selectedItem={this.state.selectedItem} />
       </div>
     );
