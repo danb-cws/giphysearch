@@ -1,5 +1,5 @@
 import React from "react";
-import ResultListItem from "./result_list_item";
+import ResultListItem from "./ResultListItem";
 
 const ResultList = props => {
   const resultItems = props.gifs.map((gif, index) => {

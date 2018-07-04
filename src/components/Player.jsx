@@ -3,7 +3,7 @@ import React from "react";
 const Player = props => {
   const mainGif = props.gifs[props.selectedItem];
   if (props.gifs.length === 0 && props.isLoaded) {
-    return <div>No gifs for that...</div>;
+    return <div>No gifs available for that...</div>;
   }
   if (!mainGif) {
     return <div>Loading...</div>;
