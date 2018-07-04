@@ -2,8 +2,13 @@ import React from "react";
 
 const Player = props => {
   const mainGif = props.gifs[props.selectedItem];
+
   if (!mainGif) {
     return <div>Loading...</div>;
+  }
+
+  if (props.gifs.length === 0 && props.isLoaded) {
+    return <div>No gifs for that...</div>;
   }
 
   return (
@@ -15,8 +20,6 @@ const Player = props => {
             : "landscape"
         }`}
         src={mainGif.images.original.url}
-        // width={mainGif.images.original.width}
-        // height={mainGif.images.original.height}
         alt={mainGif.title}
       />
     </div>

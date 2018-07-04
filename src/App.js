@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Search from "./components/search";
+import Spinner from "./components/spinner";
 import Player from "./components/player";
 import ResultList from "./components/result_list";
 import * as config from "./config";
@@ -10,13 +11,17 @@ class App extends Component {
     super(props);
     this.state = {
       gifs: [],
-      selectedItem: 0
+      selectedItem: 0,
+      isLoaded: true
     };
+  }
 
+  componentDidMount(){
     this.giphySearchHandler();
   }
 
   giphySearchHandler(term = config.default_term) {
+    this.setState({ isLoaded: false });
     return fetch(
       `${config.GIPHY_ENDPOINT}${encodeURI(term)}&api_key=${
         config.GIPHY_API_KEY
@@ -32,7 +37,7 @@ class App extends Component {
       .then(json => {
         return json.data;
       })
-      .then(gifs => this.setState({ gifs, selectedItem: 0 }))
+      .then(gifs => this.setState({ gifs, selectedItem: 0, isLoaded: true }))
       .catch(error => console.error(error));
   }
 
@@ -50,7 +55,8 @@ class App extends Component {
           selectedItem={this.state.selectedItem}
           onItemSelect={index => this.setState({ selectedItem: index })}
         />
-        <Player gifs={this.state.gifs} selectedItem={this.state.selectedItem} />
+        <Spinner isLoaded={this.state.isLoaded} />
+        <Player gifs={this.state.gifs} selectedItem={this.state.selectedItem} isLoaded={this.state.isLoaded} />
       </div>
     );
   }
