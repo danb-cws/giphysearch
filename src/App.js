@@ -16,7 +16,7 @@ class App extends Component {
     };
   }
 
-  componentDidMount(){
+  componentDidMount() {
     this.giphySearchHandler();
   }
 
@@ -53,10 +53,17 @@ class App extends Component {
         <ResultList
           gifs={this.state.gifs}
           selectedItem={this.state.selectedItem}
-          onItemSelect={index => this.setState({ selectedItem: index })}
+          onItemSelect={index => {
+            if (index !== this.state.selectedItem){
+            this.setState({ selectedItem: index })
+          }}}
         />
         <Spinner isLoaded={this.state.isLoaded} />
-        <Player gifs={this.state.gifs} selectedItem={this.state.selectedItem} isLoaded={this.state.isLoaded} />
+        <Player
+          gifs={this.state.gifs}
+          selectedItem={this.state.selectedItem}
+          isLoaded={this.state.isLoaded}
+        />
       </div>
     );
   }
