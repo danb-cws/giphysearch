@@ -10,6 +10,7 @@ class Search extends Component {
   render() {
     return (
       <input
+        autoFocus
         className="SearchInput"
         value={this.state.searchTerm}
         onChange={e => this.onInputChange(e.target.value)}
