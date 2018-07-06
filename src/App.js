@@ -12,7 +12,8 @@ class App extends Component {
     this.state = {
       gifs: [],
       selectedItem: 0,
-      isLoaded: true
+      dataIsLoaded: false,
+      imageIsLoaded: false
     };
   }
 
@@ -21,7 +22,7 @@ class App extends Component {
   }
 
   giphySearchHandler(term = config.default_term) {
-    this.setState({ isLoaded: false });
+    this.setState({ dataIsLoaded: false, imageIsLoaded: false });
     return fetch(
       `${config.GIPHY_ENDPOINT}${encodeURI(term)}&api_key=${
         config.GIPHY_API_KEY
@@ -37,7 +38,9 @@ class App extends Component {
       .then(json => {
         return json.data;
       })
-      .then(gifs => this.setState({ gifs, selectedItem: 0, isLoaded: true }))
+      .then(gifs =>
+        this.setState({ gifs, selectedItem: 0, dataIsLoaded: true })
+      )
       .catch(error => console.error(error));
   }
 
@@ -54,15 +57,19 @@ class App extends Component {
           gifs={this.state.gifs}
           selectedItem={this.state.selectedItem}
           onItemSelect={index => {
-            if (index !== this.state.selectedItem){
-            this.setState({ selectedItem: index })
-          }}}
+            if (index !== this.state.selectedItem) {
+              this.setState({ selectedItem: index, imageIsLoaded: false });
+            }
+          }}
         />
-        <Spinner isLoaded={this.state.isLoaded} />
+        <Spinner imageIsLoaded={this.state.imageIsLoaded} />
         <Player
           gifs={this.state.gifs}
           selectedItem={this.state.selectedItem}
-          isLoaded={this.state.isLoaded}
+          dataIsLoaded={this.state.dataIsLoaded}
+          onImageLoaded={() => {
+            this.setState({ imageIsLoaded: true });
+          }}
         />
       </div>
     );

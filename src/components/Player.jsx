@@ -2,17 +2,12 @@ import React from "react";
 
 const Player = props => {
   const mainGif = props.gifs[props.selectedItem];
-  if (props.gifs.length === 0 && props.isLoaded) {
-    return <div>No gifs available for that...</div>;
+  if (props.gifs.length === 0 && props.dataIsLoaded) {
+    return <div>No gifs available for that term...</div>;
   }
   if (!mainGif) {
-    return <div>Loading...</div>;
+    return <div>Loading json...</div>;
   }
-
-  const imgLoading = () => {
-    console.log("in image loading: ", this);
-    // hide spinner here
-  };
 
   return (
     <div>
@@ -24,7 +19,7 @@ const Player = props => {
         }`}
         src={mainGif.images.original.url}
         alt={mainGif.title}
-        onLoad={imgLoading}
+        onLoad={props.onImageLoaded}
       />
     </div>
   );
