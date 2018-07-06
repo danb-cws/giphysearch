@@ -9,6 +9,11 @@ const Player = props => {
     return <div>Loading...</div>;
   }
 
+  const imgLoading = () => {
+    console.log("in image loading: ", this);
+    // hide spinner here
+  };
+
   return (
     <div>
       <img
@@ -19,6 +24,7 @@ const Player = props => {
         }`}
         src={mainGif.images.original.url}
         alt={mainGif.title}
+        onLoad={imgLoading}
       />
     </div>
   );
