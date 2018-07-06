@@ -47,8 +47,8 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">Giphysearch, a React Demo by Dan B</h1>
+        <header className="App--header">
+          <h1 className="App--title">Giphysearch, a React Demo by Dan B</h1>
         </header>
         <Search
           onSearchTermChange={searchTerm => this.giphySearchHandler(searchTerm)}
