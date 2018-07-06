@@ -32,5 +32,6 @@
 }
 
 .selected-item  {
+    display: block;
     border: 2px dotted red;
 }
