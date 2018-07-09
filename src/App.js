@@ -4,6 +4,7 @@ import Spinner from "./components/Spinner";
 import Player from "./components/Player";
 import ResultList from "./components/ResultList";
 import * as config from "./config";
+import "normalize.css";
 import "./App.css";
 
 class App extends Component {
