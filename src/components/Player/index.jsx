@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-const Index = props => {
+const Player = props => {
   const mainGif = props.gifs[props.selectedItem];
   if (props.gifs.length === 0 && props.dataIsLoaded) {
     return <div>No gifs available for that term...</div>;
@@ -26,4 +26,4 @@ const Index = props => {
   );
 };
 
-export default Index;
+export default Player;
