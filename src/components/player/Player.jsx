@@ -1,4 +1,5 @@
 import React from "react";
+import "./Player.css";
 
 const Player = props => {
   const mainGif = props.gifs[props.selectedItem];
