@@ -1,5 +1,5 @@
 import React from "react";
-import "./ResultListItem.css";
+import "./style.css";
 
 const ResultListItem = ({ gif, selectedItem, index, onItemSelect }) => {
   return (

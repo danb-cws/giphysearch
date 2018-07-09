@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import Search from "./components/search/Search";
-import Spinner from "./components/spinner/Spinner";
-import Player from "./components/player/Player";
-import ResultList from "./components/result-list/ResultList";
+import Search from "./components/Search/";
+import Spinner from "./components/Spinner/";
+import Player from "./components/Player/";
+import ResultList from "./components/ResultList/";
 import * as config from "./config";
 import "normalize.css";
 import "./App.css";

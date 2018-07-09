@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import * as config from "../../config";
-import "./Search.css";
+import "./style.css";
 
 class Search extends Component {
   constructor(props) {
