@@ -1,3 +1,6 @@
 .SearchInput {
   font-size: 3em;
 }
+.SearchInput::-ms-clear {
+  display: none;
+}
