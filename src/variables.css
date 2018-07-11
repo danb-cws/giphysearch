@@ -1,0 +1,16 @@
+:root {
+  --primary-color: #000;
+  --primary-bg-color: #fff;
+  --primary-color-inverse: #fff;
+  --primary-bg-color-inverse: #000;
+  --secondary-color: #999;
+  --secondary-bg-color: #ccc;
+
+  /* structure */
+
+  --result-list-row-height: 10em;
+  --header-row-height: 7em;
+}
+
+
+
