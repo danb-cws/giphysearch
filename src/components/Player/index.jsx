@@ -5,7 +5,7 @@ const Player = props => {
   const mainGif = props.gifs[props.selectedItem];
   if (props.gifs.length === 0 && props.dataIsLoaded) {
     // nope... props.onImageLoaded();
-    return <div className="Player">No gifs available for that term...</div>;
+      return <div className="Player"><div className="Player--errortext"><div>No gifs available for that term...</div></div></div>;
   }
   if (!mainGif) {
     return <div className="Player">Loading json...</div>;
