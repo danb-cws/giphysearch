@@ -9,7 +9,6 @@
   top: 0;
   bottom: 0;
 }
-
 .App--header {
   grid-row: 3;
   grid-column: 1 / 2;
