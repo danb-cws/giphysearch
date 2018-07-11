@@ -1,0 +1,29 @@
+.Player {
+  background-color: var(--secondary-bg-color);
+  display: grid;
+  min-height: 0;
+  min-width: 0;
+}
+.Player--img {
+  object-fit: contain;
+  align-self: center;
+  justify-self: center;
+}
+.Player--img__landscape {
+  height: auto;
+  width: 100%;
+  max-height: 100%;
+}
+.Player--img__portrait {
+  height: 100%;
+  max-width: 100%;
+  width: auto;
+}
+
+/*hackaround for Edge not observing max-height*/
+@supports (-ms-ime-align: auto) {
+  .Player--img__portrait,
+  .Player--img__landscape {
+    max-height: calc(100vh - (var(--result-list-row-height) + var(--header-row-height)));
+  }
+}

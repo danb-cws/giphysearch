@@ -4,19 +4,20 @@ import "./style.css";
 const Player = props => {
   const mainGif = props.gifs[props.selectedItem];
   if (props.gifs.length === 0 && props.dataIsLoaded) {
-    return <div>No gifs available for that term...</div>;
+    // nope... props.onImageLoaded();
+    return <div className="Player">No gifs available for that term...</div>;
   }
   if (!mainGif) {
-    return <div>Loading json...</div>;
+    return <div className="Player">Loading json...</div>;
   }
 
   return (
-    <div>
+    <div className="Player">
       <img
-        className={`PlayerImg ${
+        className={`Player--img ${
           mainGif.images.original.width / mainGif.images.original.height < 1
-            ? "portrait"
-            : "landscape"
+            ? "Player--img__portrait"
+            : "Player--img__landscape"
         }`}
         src={mainGif.images.original.url}
         alt={mainGif.title}

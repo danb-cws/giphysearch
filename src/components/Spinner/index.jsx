@@ -3,9 +3,9 @@ import "./style.css";
 
 const Spinner = props => {
   if (props.imageIsLoaded) {
-    return <p className="Spinner">loaded image, spinner off..</p>;
+    return <div className="Spinner">spinner OFF..</div>;
   } else {
-    return <p className="Spinner">spin spin spinner on...</p>;
+    return <div className="Spinner">spinner ON...</div>;
   }
 };
 export default Spinner;
