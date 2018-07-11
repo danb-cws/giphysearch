@@ -1,12 +1,10 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-rows: 1fr 10em 7em;
+  grid-template-rows: 1fr var(--result-list-row-height) var(--header-row-height);
   grid-template-columns: 1fr 1fr;
   height: 100%;
   width: 100%;
-  min-height: 0;
-  min-width: 0;
   position: fixed;
   top: 0;
   bottom: 0;
