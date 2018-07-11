@@ -5,6 +5,7 @@ import Player from "./components/Player/";
 import ResultList from "./components/ResultList/";
 import * as config from "./config";
 import "normalize.css";
+import "./variables.css";
 import "./App.css";
 
 class App extends Component {
@@ -17,6 +18,13 @@ class App extends Component {
       imageIsLoaded: false
     };
   }
+
+  // state = {
+  //   gifs: [],
+  //   selectedItem: 0,
+  //   dataIsLoaded: false,
+  //   imageIsLoaded: false
+  // };
 
   componentDidMount() {
     this.giphySearchHandler();
@@ -49,7 +57,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App--header">
-          <h1 className="App--title">Giphysearch, a React Demo by Dan B</h1>
+          <h1 className="App--title">Gs</h1>
         </header>
         <Search
           onSearchTermChange={searchTerm => this.giphySearchHandler(searchTerm)}
