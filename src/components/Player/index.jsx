@@ -13,7 +13,7 @@ const Player = props => {
     );
   }
   if (!mainGif) {
-    return <div className="Player">Loading json...</div>;
+    return <div className="Player Player--loadingtext">Loading json...</div>;
   }
 
   return (
