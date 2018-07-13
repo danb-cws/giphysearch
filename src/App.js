@@ -31,9 +31,9 @@ class App extends Component {
   }
 
   giphySearchHandler(term) {
-    this.setState({ dataIsLoaded: false, imageIsLoaded: false });
+    this.setState({ searchTerm: term, dataIsLoaded: false, imageIsLoaded: false });
     return fetch(
-      `${config.GIPHY_ENDPOINT}${encodeURI(term)}&api_key=${
+      `${config.GIPHY_ENDPOINT}${encodeURI(this.state.searchTerm)}&api_key=${
         config.GIPHY_API_KEY
       }&limit=${config.RESULTS_PER_PAGE}&offset=${this.state.resultsPageIndex *
         config.RESULTS_PER_PAGE}`
@@ -82,9 +82,11 @@ class App extends Component {
             }
           }}
           onPaginate={() => {
-            let currPage = this.state.resultsPageIndex;
-            console.log('"""""""on page', currPage);
-            this.setState({ resultsPageIndex: ++currPage });
+           // debugger;
+            console.log(this.state.resultsPageIndex);
+            let nextPage = (this.state.resultsPageIndex) + 1;
+            console.log('"""""""next page to load: ', nextPage);
+            this.setState({ resultsPageIndex: nextPage });
             this.giphySearchHandler(this.state.searchTerm);
           }}
         />
