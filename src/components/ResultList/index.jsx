@@ -11,11 +11,22 @@ const ResultList = props => {
         selectedItem={props.selectedItem}
         index={index}
         onItemSelect={props.onItemSelect}
-        NodeName='li'
+        ChildNodeName="li"
       />
     );
   });
-  return <ul className="ResultList">{resultItems}</ul>;
+  return (
+    <div className="ResultList">
+      <ul className="ResultList--list">{resultItems}</ul>
+      <a
+        onClick={() => {
+          props.onPaginate();
+        }}
+      >
+        next
+      </a>
+    </div>
+  );
 };
 
 export default ResultList;

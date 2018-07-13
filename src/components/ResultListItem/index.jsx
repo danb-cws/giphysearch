@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-const ResultListItem = ({ gif, selectedItem, index, onItemSelect, NodeName }) => {
+const ResultListItem = ({ gif, selectedItem, index, onItemSelect, ChildNodeName }) => {
   return (
-    <NodeName className="ResultList--item">
+    <ChildNodeName className="ResultList--item">
       <a
         className={selectedItem === index ? "ResultList--link__selected-item" : "ResultList--link"}
         onClick={() => {
@@ -19,7 +19,7 @@ const ResultListItem = ({ gif, selectedItem, index, onItemSelect, NodeName }) =>
         />
         <h5 className="ResultList--item--title">{gif.title}</h5>
       </a>
-    </NodeName>
+    </ChildNodeName>
   );
 };
 

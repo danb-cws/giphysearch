@@ -14,6 +14,8 @@ class App extends Component {
     this.state = {
       gifs: [],
       selectedItem: 0,
+      resultsPageIndex: 0,
+      totalResults: 0,
       dataIsLoaded: false,
       imageIsLoaded: false
     };
@@ -21,9 +23,6 @@ class App extends Component {
 
   // state = {
   //   gifs: [],
-  //   selectedItem: 0,
-  //   dataIsLoaded: false,
-  //   imageIsLoaded: false
   // };
 
   componentDidMount() {
@@ -35,7 +34,8 @@ class App extends Component {
     return fetch(
       `${config.GIPHY_ENDPOINT}${encodeURI(term)}&api_key=${
         config.GIPHY_API_KEY
-      }&limit=${config.MAX_RESULTS}`
+      }&limit=${config.RESULTS_PER_PAGE}&offset=${this.state.resultsPageIndex *
+        config.RESULTS_PER_PAGE}`
     )
       .then(response => {
         if (response.ok) {
@@ -48,7 +48,12 @@ class App extends Component {
         return json.data;
       })
       .then(gifs =>
-        this.setState({ gifs, selectedItem: 0, dataIsLoaded: true })
+        this.setState({
+          gifs,
+          selectedItem: 0,
+          totalResults: gifs.length,
+          dataIsLoaded: true
+        })
       )
       .catch(error => console.error(error));
   }
@@ -60,7 +65,10 @@ class App extends Component {
           <h1 className="App--title">Gs</h1>
         </header>
         <Search
-          onSearchTermChange={searchTerm => this.giphySearchHandler(searchTerm)}
+          onSearchTermChange={searchTerm => {
+            this.setState({ resultsPageIndex: 0 });
+            this.giphySearchHandler(searchTerm);
+          }}
         />
         <ResultList
           gifs={this.state.gifs}
@@ -69,6 +77,12 @@ class App extends Component {
             if (index !== this.state.selectedItem) {
               this.setState({ selectedItem: index, imageIsLoaded: false });
             }
+          }}
+          onPaginate={() => {
+            let currPage = this.state.resultsPageIndex;
+            console.log('"""""""on page', currPage);
+            this.setState({ resultsPageIndex: ++currPage });
+            this.giphySearchHandler();
           }}
         />
         <Spinner imageIsLoaded={this.state.imageIsLoaded} />
