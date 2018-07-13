@@ -12,6 +12,7 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      searchTerm: config.default_term,
       gifs: [],
       selectedItem: 0,
       resultsPageIndex: 0,
@@ -26,10 +27,10 @@ class App extends Component {
   // };
 
   componentDidMount() {
-    this.giphySearchHandler();
+    this.giphySearchHandler(this.state.searchTerm);
   }
 
-  giphySearchHandler(term = config.default_term) {
+  giphySearchHandler(term) {
     this.setState({ dataIsLoaded: false, imageIsLoaded: false });
     return fetch(
       `${config.GIPHY_ENDPOINT}${encodeURI(term)}&api_key=${
@@ -45,13 +46,15 @@ class App extends Component {
         }
       })
       .then(json => {
+        this.setState({
+          totalResults: json.pagination.total_count
+        });
         return json.data;
       })
       .then(gifs =>
         this.setState({
           gifs,
           selectedItem: 0,
-          totalResults: gifs.length,
           dataIsLoaded: true
         })
       )
@@ -66,7 +69,7 @@ class App extends Component {
         </header>
         <Search
           onSearchTermChange={searchTerm => {
-            this.setState({ resultsPageIndex: 0 });
+            this.setState({ searchTerm: searchTerm , resultsPageIndex: 0 });
             this.giphySearchHandler(searchTerm);
           }}
         />
@@ -82,7 +85,7 @@ class App extends Component {
             let currPage = this.state.resultsPageIndex;
             console.log('"""""""on page', currPage);
             this.setState({ resultsPageIndex: ++currPage });
-            this.giphySearchHandler();
+            this.giphySearchHandler(this.state.searchTerm);
           }}
         />
         <Spinner imageIsLoaded={this.state.imageIsLoaded} />
