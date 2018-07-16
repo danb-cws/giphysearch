@@ -1,16 +1,28 @@
 :root {
-  --primary-color: #000;
-  --primary-bg-color: #fff;
-  --primary-color-inverse: #fff;
-  --primary-bg-color-inverse: #000;
+  --primary-color: #fff;
+  --primary-bg-color: #121212;
+  --primary-color-inverse: #121212;
+  --primary-bg-color-inverse: #fff;
+
   --secondary-color: #999;
-  --secondary-bg-color: #ccc;
+  --secondary-bg-color: #3b3b3b;
+  --secondary-color-inverse: #3b3b3b;
+  --secondary-bg-color-inverse: #999;
 
-  /* structure */
+  --highlight-color: #fff;
+  --highlight-bg-color: #ffa500;
+  --highlight-color-hover: #fff;
+  --highlight-bg-color-hover: #ffdd00;
 
-  --result-list-row-height: 10em;
-  --header-row-height: 7em;
+  /* spacing */
+  --primary-vertical-gutter: 1rem;
+  --primary-horizontal-gutter: 0.5rem;
+
+  --secondary-vertical-gutter: 0.3rem;
+  --secondary-horizontal-gutter: 0.4rem;
+
+  /* structural */
+  --result-list-height: 9em;
+  --header-height: 5em;
+  --pagination-button-width: 2em;
 }
-
-
-

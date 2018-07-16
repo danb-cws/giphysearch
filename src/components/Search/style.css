@@ -1,5 +1,8 @@
 .SearchInput {
   font-size: 3em;
+  color: var(--primary-color-inverse);
+  background-color: var(--primary-bg-color-inverse);
+  padding: 0 var(--primary-horizontal-gutter);
 }
 .SearchInput::-ms-clear {
   display: none;
