@@ -1,13 +1,10 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-rows: 1fr var(--result-list-row-height) var(--header-row-height);
+  grid-template-rows: 1fr var(--result-list-height) var(--header-height);
   grid-template-columns: 1fr 1fr;
   height: 100%;
   width: 100%;
-  position: fixed;
-  top: 0;
-  bottom: 0;
 }
 .App--header {
   grid-row: 3;
@@ -16,6 +13,19 @@
 .SearchInput {
   grid-row: 3;
   grid-column: 2 / 3;
+}
+@media screen and (orientation: portrait) {
+  .App {
+    grid-template-rows: 1fr calc(2 * var(--result-list-height)) var(--header-height) var(--header-height);
+  }
+  .App--header {
+    grid-row: 4;
+    grid-column: 1/3;
+  }
+  .SearchInput {
+    grid-row: 3;
+    grid-column: 1/3;
+  }
 }
 .ResultList {
   grid-row: 2;
@@ -32,8 +42,8 @@
 }
 
 .App--header {
-  color: var(--primary-color-inverse);
-  background-color: var(--primary-bg-color-inverse);
+  /*color: var(--primary-color);*/
+  /*background-color: var(--primary-bg-color);*/
 }
 
 .App--title {
