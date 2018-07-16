@@ -5,7 +5,7 @@ const ResultListItem = ({ gif, selectedItem, index, onItemSelect, ChildNodeName 
   return (
     <ChildNodeName className="ResultList--item">
       <a
-        className={selectedItem === index ? "ResultList--link__selected-item" : "ResultList--link"}
+        className={selectedItem === index ? "ResultList--item--link ResultList--item--link__selected-item" : "ResultList--item--link"}
         onClick={() => {
           onItemSelect(index);
         }}
@@ -17,7 +17,7 @@ const ResultListItem = ({ gif, selectedItem, index, onItemSelect, ChildNodeName 
           height={gif.images.fixed_height_small_still.height}
           alt={gif.title}
         />
-        <h5 className="ResultList--item--title">{gif.title}</h5>
+        <h5 className="ResultList--item--title">{gif.title || '(No title)'}</h5>
       </a>
     </ChildNodeName>
   );
