@@ -14,6 +14,13 @@
   --highlight-color-hover: #fff;
   --highlight-bg-color-hover: #ffdd00;
 
+  --control-color: #fff;
+  --control-bg-color: #ffa500;
+  --control-color-hover: #ffc;
+  --control-bg-color-hover: #ffb450;
+  --control-disabled-color: #999;
+  --control-disabled-bg-color: #ccc;
+
   /* spacing */
   --primary-vertical-gutter: 1rem;
   --primary-horizontal-gutter: 0.5rem;

@@ -1,0 +1,38 @@
+.Paginator {
+  flex-basis: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  border-top: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
+  border-bottom: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
+  border-left: none;
+  border-right: none;
+  color: var(--control-color);
+  background-color: var(--control-bg-color);
+  cursor: pointer;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+.Paginator:hover {
+  color: var(--control-color-hover);
+  background-color: var(--control-bg-color-hover);
+}
+.Paginator__disabled,
+.Paginator__disabled:hover {
+  color: var(--control-disabled-color);
+  background-color: var(--control-disabled-bg-color);
+  cursor: default;
+}
+.Paginator__label {
+  display: block;
+  text-transform: uppercase;
+  font-size: 2rem;
+  text-align: center;
+  transform: rotate(-90deg);
+}
+.Paginator__label-fwd {
+  transform: rotate(90deg);
+}

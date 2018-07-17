@@ -1,5 +1,6 @@
 import React from "react";
 import ResultListItem from "../ResultListItem";
+import Paginator from "../Paginator";
 import "./style.css";
 
 const ResultList = props => {
@@ -18,25 +19,25 @@ const ResultList = props => {
   });
   return (
     <div className="ResultList">
-      <a
-        className="ResultList--paginator"
-        onClick={() => {
-          props.onPaginate(-1);
-        }}
+      <Paginator
+        onPaginate={props.onPaginate}
+        totalResults={props.totalResults}
+        resultsPageIndex={props.resultsPageIndex}
+        dir={-1}
       >
         Back
-      </a>
+      </Paginator>
       <ul className="ResultList--list">
         {resultItems.length ? resultItems : noResults}
       </ul>
-      <a
-        className="ResultList--paginator"
-        onClick={() => {
-          props.onPaginate(1);
-        }}
+      <Paginator
+        onPaginate={props.onPaginate}
+        totalResults={props.totalResults}
+        resultsPageIndex={props.resultsPageIndex}
+        dir={1}
       >
         Fwd
-      </a>
+      </Paginator>
     </div>
   );
 };

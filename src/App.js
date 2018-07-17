@@ -70,6 +70,7 @@ class App extends Component {
       <div className="App">
         <header className="App--header">
           <h1 className="App--title">Giphysearch</h1>
+          <p>A work in progress... <a href='https://github.com/danb-cws/giphysearch'>Github</a></p>
         </header>
         <Search
           onSearchTermChange={searchTerm => {
@@ -80,6 +81,8 @@ class App extends Component {
         <ResultList
           gifs={this.state.gifs}
           selectedItem={this.state.selectedItem}
+          totalResults={this.state.totalResults}
+          resultsPageIndex={this.state.resultsPageIndex}
           onItemSelect={index => {
             if (index !== this.state.selectedItem) {
               this.setState({ selectedItem: index, imageIsLoaded: false });

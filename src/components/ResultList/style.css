@@ -18,12 +18,3 @@
   align-items: center;
   justify-content: center;
 }
-
-.ResultList--paginator {
-  display: block;
-  flex-basis: 4em;
-  align-self: stretch;
-  border-top: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
-  border-bottom: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
-  background: orange;
-}
