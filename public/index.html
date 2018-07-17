@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico">
     <title>Giphysearch</title>
     <style>
-      /* minimal css for pre boot */
+      /* minimal css for pre-boot */
       html {
         height: 100%;
       }
@@ -28,16 +28,15 @@
         display: -ms-flexbox;
         display: flex;
         height: 100%;
+        width: 100%;
         -webkit-box-pack: center;
         -ms-flex-pack: center;
         justify-content: center;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
+        text-align: center;
         opacity: 0;
         -webkit-animation: fadein 1s linear 1s forwards;
         animation: fadein 1s linear 1s forwards;
@@ -45,7 +44,7 @@
       .root-loading--copy {
         color: #444;
         width: 50%;
-        margin-top: 2em;
+        margin: 2em auto;
       }
       @-webkit-keyframes fadein {
         to { opacity: 1; }
@@ -53,17 +52,10 @@
       @keyframes fadein {
         to { opacity: 1; }
       }
-      /* just because! ;) */
       noscript {
-        position: fixed;
-        top: 0;
-        bottom: 0;
-        right: 0;
-        left: 0;
-        z-index: 1;
+        height: 100%;
         padding: 1em;
         background: red;
-        color: white;
         font-size: 2em;
         display: -webkit-box;
         display: -ms-flexbox;
@@ -87,7 +79,7 @@
         <h1>Giphysearch</h1>
         <p>Booting React...</p>
         <p class="root-loading--copy">Giphysearch is a React application that allows you to search the Giphy API within a fast and reactive UI.
-          Giphysearch is a learning demo project by Dan B.</p>
+          Giphysearch is a code demo and learning project by Dan B.</p>
       </div>
     </div>
   </body>
