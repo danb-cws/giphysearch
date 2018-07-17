@@ -16,7 +16,7 @@ class Search extends Component {
 
   debouncedOnInputChange = debounce(searchTerm => {
     this.props.onSearchTermChange(searchTerm);
-  }, 250);
+  }, 200);
 
   render() {
     return (
