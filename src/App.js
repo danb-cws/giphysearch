@@ -9,22 +9,28 @@ import "./variables.css";
 import "./App.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      searchTerm: config.default_term,
-      gifs: [],
-      selectedItem: 0,
-      resultsPageIndex: 0,
-      totalResults: 0,
-      dataIsLoaded: false,
-      imageIsLoaded: false
-    };
-  }
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     searchTerm: config.default_term,
+  //     gifs: [],
+  //     selectedItem: 0,
+  //     resultsPageIndex: 0,
+  //     totalResults: 0,
+  //     dataIsLoaded: false,
+  //     imageIsLoaded: false
+  //   };
+  // }
 
-  // state = {
-  //   gifs: [],
-  // };
+  state = {
+    searchTerm: config.default_term,
+    gifs: [],
+    selectedItem: 0,
+    resultsPageIndex: 0,
+    totalResults: 0,
+    dataIsLoaded: false,
+    imageIsLoaded: false
+  };
 
   componentDidMount() {
     this.giphySearchHandler(this.state.searchTerm);
@@ -70,7 +76,10 @@ class App extends Component {
       <div className="App">
         <header className="App--header">
           <h1 className="App--title">Giphysearch</h1>
-          <p>A work in progress... <a href='https://github.com/danb-cws/giphysearch'>Github</a></p>
+          <p>
+            A work in progress...{" "}
+            <a href="https://github.com/danb-cws/giphysearch">Github</a>
+          </p>
         </header>
         <Search
           onSearchTermChange={searchTerm => {
@@ -88,7 +97,7 @@ class App extends Component {
               this.setState({ selectedItem: index, imageIsLoaded: false });
             }
           }}
-          onPaginate={(dir) => {
+          onPaginate={dir => {
             let nextPage = this.state.resultsPageIndex + dir;
             console.log('"""""""next page to load: ', nextPage);
             this.setState({ resultsPageIndex: nextPage }, () => {
