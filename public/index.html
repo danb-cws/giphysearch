@@ -37,12 +37,20 @@
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
-        flex-direction: column
+        flex-direction: column;
+        -webkit-animation: fadein 1s ease-in 1.5s;
+        animation: fadein 1s ease-in 1.5s;
       }
       .root-loading--copy {
         color: #444;
         width: 50%;
         margin-top: 2em;
+      }
+      @-webkit-keyframes fadein {
+        from { opacity: 0; }
+      }
+      @keyframes fadein {
+        from { opacity: 0; }
       }
       /* just because! ;) */
       noscript {
