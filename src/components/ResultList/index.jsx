@@ -18,14 +18,21 @@ const ResultList = props => {
   });
   return (
     <div className="ResultList">
-      <a className="ResultList--paginator">Back</a>
+      <a
+        className="ResultList--paginator"
+        onClick={() => {
+          props.onPaginate(-1);
+        }}
+      >
+        Back
+      </a>
       <ul className="ResultList--list">
         {resultItems.length ? resultItems : noResults}
       </ul>
       <a
         className="ResultList--paginator"
         onClick={() => {
-          props.onPaginate();
+          props.onPaginate(1);
         }}
       >
         Fwd

@@ -31,7 +31,11 @@ class App extends Component {
   }
 
   giphySearchHandler(term) {
-    this.setState({ searchTerm: term, dataIsLoaded: false, imageIsLoaded: false });
+    this.setState({
+      searchTerm: term,
+      dataIsLoaded: false,
+      imageIsLoaded: false
+    });
     return fetch(
       `${config.GIPHY_ENDPOINT}${encodeURI(this.state.searchTerm)}&api_key=${
         config.GIPHY_API_KEY
@@ -65,11 +69,11 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App--header">
-          <h1 className="App--title">Gs</h1>
+          <h1 className="App--title">Giphysearch</h1>
         </header>
         <Search
           onSearchTermChange={searchTerm => {
-            this.setState({ searchTerm: searchTerm , resultsPageIndex: 0 });
+            this.setState({ searchTerm: searchTerm, resultsPageIndex: 0 });
             this.giphySearchHandler(searchTerm);
           }}
         />
@@ -81,13 +85,14 @@ class App extends Component {
               this.setState({ selectedItem: index, imageIsLoaded: false });
             }
           }}
-          onPaginate={() => {
-           // debugger;
-            console.log(this.state.resultsPageIndex);
-            let nextPage = (this.state.resultsPageIndex) + 1;
+          onPaginate={(dir) => {
+            let nextPage = this.state.resultsPageIndex + dir;
             console.log('"""""""next page to load: ', nextPage);
-            this.setState({ resultsPageIndex: nextPage });
-            this.giphySearchHandler(this.state.searchTerm);
+            this.setState({ resultsPageIndex: nextPage }, () => {
+              this.giphySearchHandler(this.state.searchTerm);
+            });
+
+            console.log(this.state.searchTerm);
           }}
         />
         <Spinner imageIsLoaded={this.state.imageIsLoaded} />
