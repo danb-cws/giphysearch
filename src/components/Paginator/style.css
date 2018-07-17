@@ -1,6 +1,6 @@
 .Paginator {
-  flex-basis: 4rem;
-  width: 4rem;
+  width: var(--pagination-button-width);
+  flex-basis: auto;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,7 +12,6 @@
   color: var(--control-color);
   background-color: var(--control-bg-color);
   cursor: pointer;
-  outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
@@ -25,6 +24,9 @@
   color: var(--control-disabled-color);
   background-color: var(--control-disabled-bg-color);
   cursor: default;
+}
+.Paginator:focus {
+  outline: none;
 }
 .Paginator__label {
   display: block;

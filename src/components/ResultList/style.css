@@ -1,12 +1,13 @@
 .ResultList {
   display: flex;
   justify-content: space-between;
+  overflow-x: hidden;
 }
 
 .ResultList--list {
   display: flex;
   flex-wrap: wrap;
-  width: calc(100% - (2 * var(--secondary-horizontal-gutter) + (2 * var(--pagination-button-width))));
+  width: calc(100% - (2 * var(--pagination-button-width)));
   margin: 0 0 var(--secondary-vertical-gutter) var(--secondary-horizontal-gutter);
   padding: 0;
 }
