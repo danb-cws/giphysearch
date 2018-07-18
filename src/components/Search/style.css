@@ -4,6 +4,7 @@
   background-color: var(--primary-bg-color-inverse);
   padding: 0 var(--primary-horizontal-gutter);
   border: none;
+  border-radius: 0;
   outline: none;
   -webkit-appearance: none;
   -moz-appearance: none;

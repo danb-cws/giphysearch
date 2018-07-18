@@ -13,8 +13,6 @@ const ResultListItem = ({ gif, selectedItem, index, onItemSelect, ChildNodeName 
         <img
           className='ResultList--item--img'
           src={gif.images.fixed_height_small_still.url}
-          width={gif.images.fixed_height_small_still.width}
-          height={gif.images.fixed_height_small_still.height}
           alt={gif.title}
         />
         <h5 className="ResultList--item--title">{gif.title || '(No title)'}</h5>

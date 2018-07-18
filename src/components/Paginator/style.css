@@ -1,10 +1,9 @@
 .Paginator {
   width: var(--pagination-button-width);
-  flex-basis: auto;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
   border-top: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
   border-bottom: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
   border-left: none;
@@ -29,7 +28,6 @@
   outline: none;
 }
 .Paginator__label {
-  display: block;
   text-transform: uppercase;
   font-size: 2rem;
   text-align: center;
@@ -37,4 +35,13 @@
 }
 .Paginator__label-fwd {
   transform: rotate(90deg);
+}
+
+@supports (-webkit-overflow-scrolling: touch) {
+  .Paginator__label {
+    margin-left: -18px;
+  }
+  .Paginator__label-fwd {
+    margin-left: -11px;
+  }
 }

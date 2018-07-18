@@ -1,6 +1,7 @@
 .ResultList {
   display: flex;
   justify-content: space-between;
+  align-items: stretch;
   overflow-x: hidden;
 }
 

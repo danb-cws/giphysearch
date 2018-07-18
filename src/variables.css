@@ -29,7 +29,7 @@
   --secondary-horizontal-gutter: 0.4rem;
 
   /* structural */
-  --result-list-height: 9em;
-  --header-height: 5em;
-  --pagination-button-width: 3em;
+  --result-list-height: 9rem;
+  --header-height: 5rem;
+  --pagination-button-width: 3rem;
 }
