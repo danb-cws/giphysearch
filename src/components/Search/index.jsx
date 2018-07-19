@@ -10,7 +10,7 @@ class Search extends Component {
   }
 
   onInputChange = searchTerm => {
-    this.setState({ searchTerm });
+    this.setState({ searchTerm });// dont want to debounce this as the controlled input gets laggy
     this.debouncedOnInputChange(searchTerm);
   };
 
