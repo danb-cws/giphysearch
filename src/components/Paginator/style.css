@@ -8,6 +8,8 @@
   border-bottom: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
   border-left: none;
   border-right: none;
+  text-transform: uppercase;
+  font-size: 2rem;
   color: var(--control-color);
   background-color: var(--control-bg-color);
   cursor: pointer;
@@ -28,20 +30,8 @@
   outline: none;
 }
 .Paginator__label {
-  text-transform: uppercase;
-  font-size: 2rem;
-  text-align: center;
-  transform: rotate(-90deg);
+  writing-mode: vertical-rl;
 }
 .Paginator__label-fwd {
-  transform: rotate(90deg);
-}
-
-@supports (-webkit-overflow-scrolling: touch) {
-  .Paginator__label {
-    margin-left: -18px;
-  }
-  .Paginator__label-fwd {
-    margin-left: -11px;
-  }
+  transform: rotate(180deg);
 }
