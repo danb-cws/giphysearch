@@ -1,12 +1,12 @@
+import "normalize.css";
+import "./variables.css";
+import "./App.css";
 import React, { Component } from "react";
 import Search from "./components/Search/";
 import Spinner from "./components/Spinner/";
 import Player from "./components/Player/";
 import ResultList from "./components/ResultList/";
 import * as config from "./config";
-import "normalize.css";
-import "./variables.css";
-import "./App.css";
 
 class App extends Component {
   // constructor(props) {
