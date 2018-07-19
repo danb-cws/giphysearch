@@ -12,6 +12,8 @@ const ResultListItem = ({ gif, selectedItem, index, onItemSelect, ChildNodeName 
       >
         <img
           className='ResultList--item--img'
+          width={gif.images.fixed_height_small_still.width}
+          height={gif.images.fixed_height_small_still.height}
           src={gif.images.fixed_height_small_still.url}
           alt={gif.title}
         />
