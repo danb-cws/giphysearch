@@ -29,7 +29,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin: 0;
+  margin: 0.25rem 0;
 }
 .ResultList--item--link__selected-item {
   color: var(--highlight-color);

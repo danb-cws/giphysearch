@@ -8,10 +8,10 @@
   border-bottom: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
   border-left: none;
   border-right: none;
-  text-transform: uppercase;
-  font-size: 2rem;
   color: var(--control-color);
   background-color: var(--control-bg-color);
+  text-transform: uppercase;
+  font-size: 2rem;
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -34,4 +34,14 @@
 }
 .Paginator__label-fwd {
   transform: rotate(180deg);
+}
+
+/* fix positioning on ios */
+@supports (-webkit-overflow-scrolling: touch) {
+  .Paginator__label {
+    margin-left: -1.45em;
+  }
+  .Paginator__label-fwd {
+    margin-left: .2em;
+  }
 }
