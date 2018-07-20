@@ -1,13 +1,11 @@
 .Paginator {
   width: var(--pagination-button-width);
   padding: 0;
+  margin: 0;
+  border: none;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
-  border-bottom: var(--secondary-vertical-gutter) solid var(--primary-bg-color);
-  border-left: none;
-  border-right: none;
   color: var(--control-color);
   background-color: var(--control-bg-color);
   text-transform: uppercase;

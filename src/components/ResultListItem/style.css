@@ -1,12 +1,15 @@
 .ResultList--item {
   list-style: none;
   width: 16.666667%;
-  padding: var(--secondary-vertical-gutter) var(--secondary-horizontal-gutter) 0 0;
+  padding: 0 var(--secondary-horizontal-gutter) 0 0;
   box-sizing: border-box;
 }
 @media screen and (orientation: portrait) {
   .ResultList--item {
     width: 33.333333%;
+  }
+  .ResultList--item:nth-child(-n+3) {
+    padding-bottom: var(--secondary-vertical-gutter);
   }
 }
 .ResultList--item--link {

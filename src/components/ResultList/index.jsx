@@ -25,7 +25,7 @@ const ResultList = props => {
         resultsPageIndex={props.resultsPageIndex}
         dir={-1}
       >
-        Back
+        Prev
       </Paginator>
       <ul className="ResultList--list">
         {resultItems.length ? resultItems : noResults}
@@ -36,7 +36,7 @@ const ResultList = props => {
         resultsPageIndex={props.resultsPageIndex}
         dir={1}
       >
-        Fwd
+        Next
       </Paginator>
     </div>
   );

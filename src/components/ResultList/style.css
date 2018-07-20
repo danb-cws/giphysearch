@@ -2,14 +2,16 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  overflow-x: hidden;
+  overflow: hidden;
+  margin-top: var(--secondary-vertical-gutter);
+  margin-bottom: var(--secondary-vertical-gutter);
 }
 
 .ResultList--list {
   display: flex;
   flex-wrap: wrap;
   width: calc(100% - (2 * var(--pagination-button-width)));
-  margin: 0 0 var(--secondary-vertical-gutter) var(--secondary-horizontal-gutter);
+  margin: 0 0 0 var(--secondary-horizontal-gutter);
   padding: 0;
 }
 .ResultList--no-results {
