@@ -26,10 +26,12 @@
   background-size: 1rem;
 }
 .ResultList--item--title {
-  overflow: hidden;
+  overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  margin: 0.25rem 0;
+  font-size: .83rem;
+  line-height: 1.2;
+  margin: 0.2rem 0;
 }
 .ResultList--item--link__selected-item {
   color: var(--highlight-color);
