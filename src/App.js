@@ -9,19 +9,6 @@ import ResultList from "./components/ResultList/";
 import * as config from "./config";
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     searchTerm: config.default_term,
-  //     gifs: [],
-  //     selectedItem: 0,
-  //     resultsPageIndex: 0,
-  //     totalResults: 0,
-  //     dataIsLoaded: false,
-  //     imageIsLoaded: false
-  //   };
-  // }
-
   state = {
     searchTerm: config.default_term,
     gifs: [],
@@ -99,12 +86,9 @@ class App extends Component {
           }}
           onPaginate={dir => {
             let nextPage = this.state.resultsPageIndex + dir;
-            console.log('"""""""next page to load: ', nextPage);
             this.setState({ resultsPageIndex: nextPage }, () => {
               this.giphySearchHandler(this.state.searchTerm);
             });
-
-            console.log(this.state.searchTerm);
           }}
         />
         <Spinner imageIsLoaded={this.state.imageIsLoaded} />
