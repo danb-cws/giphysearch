@@ -4,7 +4,6 @@ import Paginator from "../Paginator";
 import "./style.css";
 
 const ResultList = props => {
-  const noResults = <li className="ResultList--no-results">No results</li>;
   const resultItems = props.gifs.map((gif, index) => {
     return (
       <ResultListItem
@@ -28,7 +27,7 @@ const ResultList = props => {
         Prev
       </Paginator>
       <ul className="ResultList--list">
-        {resultItems.length ? resultItems : noResults}
+        {resultItems.length ? resultItems : <li className="ResultList--no-results">No results</li>}
       </ul>
       <Paginator
         onPaginate={props.onPaginate}
