@@ -111,6 +111,7 @@ class App extends Component {
         <Player
           gifs={this.state.gifs}
           selectedItem={this.state.selectedItem}
+          searchTerm={this.state.searchTerm}
           dataIsLoaded={this.state.dataIsLoaded}
           onImageLoaded={() => {
             this.setState({ imageIsLoaded: true });

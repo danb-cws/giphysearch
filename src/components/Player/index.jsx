@@ -7,7 +7,7 @@ const Player = props => {
     return (
       <div className="Player">
         <div className="Player--errortext">
-          <div>No gifs available for that term...</div>
+          <div>{!props.searchTerm ? 'Enter a term in the search field' : `No gifs available for "${props.searchTerm}"`}</div>
         </div>
       </div>
     );
