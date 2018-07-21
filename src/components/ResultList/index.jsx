@@ -11,6 +11,7 @@ const ResultList = props => {
         gif={gif}
         selectedItem={props.selectedItem}
         index={index}
+        resultsPageIndex={props.resultsPageIndex}
         onItemSelect={props.onItemSelect}
         ChildNodeName="li"
       />
