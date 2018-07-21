@@ -141,7 +141,7 @@ class App extends Component {
             });
           }}
         />
-        <Spinner imageIsLoaded={this.state.imageIsLoaded} />
+        <Spinner showSpinner={!this.state.imageIsLoaded} />
         <Player
           gifs={this.state.gifs}
           selectedGifData={this.state.selectedGifData}
