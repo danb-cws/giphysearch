@@ -28,5 +28,4 @@
 }
 .Player--loadingtext {
   color: var(--secondary-color-inverse);
-  margin-bottom: -8em;
 }
