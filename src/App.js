@@ -40,25 +40,29 @@ class App extends Component {
   }
 
   giphySearchHandler(term) {
-    this.setState({
-      searchTerm: term,
-      dataIsLoaded: false,
-      imageIsLoaded: false
-    }, () => {
-      this.fetchData().catch(e => {console.log('error: ',e);});
-    }
-
-    )}
+    this.setState(
+      {
+        searchTerm: term,
+        dataIsLoaded: false,
+        imageIsLoaded: false
+      },
+      () => {
+        this.fetchData().catch(e => {
+          console.log("error: ", e);
+        });
+      }
+    );
+  }
 
   fetchData = () => {
-
-    console.log('hello!');
+    console.log("hello!");
     return fetch(
       `${config.GIPHY_ENDPOINT}search?q=${encodeURI(
         this.state.searchTerm
       )}&api_key=${config.GIPHY_API_KEY}&limit=${
         config.RESULTS_PER_PAGE
-      }&offset=${this.state.resultsPageIndex * config.RESULTS_PER_PAGE}&rating=Y`
+      }&offset=${this.state.resultsPageIndex *
+        config.RESULTS_PER_PAGE}&rating=Y`
     )
       .then(response => {
         if (response.ok) {
@@ -79,11 +83,13 @@ class App extends Component {
             gifs,
             dataIsLoaded: true
           },
-          gifs.length ? this.setImageId(gifs[this.state.selectedItem].id) : this.setImageId(0)
+          gifs.length
+            ? this.setImageId(gifs[this.state.selectedItem].id)
+            : this.setImageId(0)
         )
       )
       .catch(error => console.error(error));
-  }
+  };
 
   fetchPlayerImage(id) {
     return fetch(
@@ -115,7 +121,11 @@ class App extends Component {
         </header>
         <Search
           onSearchTermChange={searchTerm => {
-            this.setState({ searchTerm: searchTerm, resultsPageIndex: 0, selectedItem: 0 });
+            this.setState({
+              searchTerm: searchTerm,
+              resultsPageIndex: 0,
+              selectedItem: 0
+            });
             this.giphySearchHandler(searchTerm);
           }}
         />
@@ -136,7 +146,7 @@ class App extends Component {
           onPaginate={dir => {
             let nextPage = this.state.resultsPageIndex + dir;
             this.setState({ resultsPageIndex: nextPage }, () => {
-              console.log('TERM: ',this.state.searchTerm);
+              console.log("TERM: ", this.state.searchTerm);
               this.giphySearchHandler(this.state.searchTerm);
             });
           }}
