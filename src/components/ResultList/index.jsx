@@ -28,7 +28,11 @@ const ResultList = props => {
         Prev
       </Paginator>
       <ul className="ResultList--list">
-        {resultItems.length ? resultItems : <li className="ResultList--no-results">No results</li>}
+        {resultItems.length ? (
+          resultItems
+        ) : (
+          <li className="ResultList--no-results">No results</li>
+        )}
       </ul>
       <Paginator
         onPaginate={props.onPaginate}
