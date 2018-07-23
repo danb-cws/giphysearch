@@ -4,19 +4,20 @@ import debounce from "debounce";
 import "./style.css";
 
 class Search extends Component {
-  constructor(props) {
-    super(props);
-    this.state = { searchTerm: config.default_term };
-  }
+  state = { searchTerm: config.default_term };
 
   onInputChange = searchTerm => {
-    this.setState({ searchTerm });// dont want to debounce this as the controlled input gets laggy
+    this.setState({ searchTerm }); // dont want to debounce this as the controlled input gets laggy
     this.debouncedOnInputChange(searchTerm);
   };
 
   debouncedOnInputChange = debounce(searchTerm => {
     this.props.onSearchTermChange(searchTerm);
   }, 200);
+
+  componentDidMount() {
+    this.onInputChange(this.state.searchTerm); // fire with initial default search term
+  }
 
   render() {
     return (
