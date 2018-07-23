@@ -24,7 +24,7 @@ const ResultListItem = ({
           if (selectedItem === dataIndex) {
             return;
           }
-          onItemSelect(index, gif.id);
+          onItemSelect(dataIndex, gif.id);
         }}
       >
         <img
