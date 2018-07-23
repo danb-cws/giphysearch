@@ -11,7 +11,7 @@ const Player = props => {
     return true;
   }
 
-  if (props.gifs.length === 0 && props.dataIsLoaded) {
+  if (props.gifs.length === 0 && props.jsonIsLoaded) {
     return (
       <div className="Player">
         <div className="Player--errortext">
@@ -24,6 +24,7 @@ const Player = props => {
       </div>
     );
   }
+
   if (isEmpty(mainGif)) {
     return <div className="Player Player--loadingtext">Loading json...</div>;
   }
