@@ -16,7 +16,9 @@
 }
 @media screen and (orientation: portrait) {
   .App {
-    grid-template-rows: 1fr calc(2 * var(--result-list-height)) var(--header-height) var(--header-height);
+    grid-template-rows: 1fr calc(2 * var(--result-list-height)) var(
+        --header-height
+      ) var(--header-height);
   }
   .App--header {
     grid-row: 4;
