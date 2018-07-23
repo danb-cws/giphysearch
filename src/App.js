@@ -121,6 +121,7 @@ class App extends Component {
               searchTerm: searchTerm,
               resultsPageIndex: 0,
               selectedItem: 0,
+              selectedGifData: {},
               hasPaginated: false
             });
             this.giphySearchHandler();
