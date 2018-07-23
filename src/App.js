@@ -10,59 +10,38 @@ import * as config from "./config";
 
 class App extends Component {
   state = {
-    searchTerm: config.default_term,
+    searchTerm: "",
     gifs: [],
     selectedGifData: {},
     selectedItem: 0,
     resultsPageIndex: 0,
     totalResults: 0,
     currentId: 0,
-    dataIsLoaded: false,
+    hasPaginated: false,
+    jsonIsLoaded: false,
     imageIsLoaded: false
   };
 
-  componentDidMount() {
-    this.giphySearchHandler(this.state.searchTerm);
-  }
-
-  setImageId(id) {
-    if (id === 0) {
-      this.setState({
-        currentId: id
-      });
-    } else {
-      this.setState({
-        currentId: id,
-        imageIsLoaded: false
-      });
-      this.fetchPlayerImage(id);
-    }
-  }
-
-  giphySearchHandler(term) {
+  giphySearchHandler() {
     this.setState(
       {
-        searchTerm: term,
-        dataIsLoaded: false,
-        imageIsLoaded: false
+        jsonIsLoaded: false
       },
       () => {
         this.fetchData().catch(e => {
-          console.log("error: ", e);
+          console.error("Error fetching data: ", e);
         });
       }
     );
   }
 
   fetchData = () => {
-    console.log("hello!");
     return fetch(
       `${config.GIPHY_ENDPOINT}search?q=${encodeURI(
         this.state.searchTerm
       )}&api_key=${config.GIPHY_API_KEY}&limit=${
         config.RESULTS_PER_PAGE
-      }&offset=${this.state.resultsPageIndex *
-        config.RESULTS_PER_PAGE}&rating=Y`
+      }&offset=${this.state.resultsPageIndex * config.RESULTS_PER_PAGE}`
     )
       .then(response => {
         if (response.ok) {
@@ -81,15 +60,31 @@ class App extends Component {
         this.setState(
           {
             gifs,
-            dataIsLoaded: true
+            jsonIsLoaded: true
           },
-          gifs.length
-            ? this.setImageId(gifs[this.state.selectedItem].id)
-            : this.setImageId(0)
+          !gifs.length
+            ? this.setImageId(0)
+            : this.state.resultsPageIndex === 0 && !this.state.hasPaginated
+              ? this.setImageId(gifs[0].id)
+              : null
         )
       )
       .catch(error => console.error(error));
   };
+
+  setImageId(id) {
+    if (id === 0) {
+      this.setState({
+        currentId: 0
+      });
+    } else {
+      this.setState({
+        currentId: id,
+        imageIsLoaded: false
+      });
+      this.fetchPlayerImage(id);
+    }
+  }
 
   fetchPlayerImage(id) {
     return fetch(
@@ -104,7 +99,8 @@ class App extends Component {
       })
       .then(json => {
         this.setState({
-          selectedGifData: json.data
+          selectedGifData: json.data,
+          imageIsLoaded: false
         });
       });
   }
@@ -124,9 +120,10 @@ class App extends Component {
             this.setState({
               searchTerm: searchTerm,
               resultsPageIndex: 0,
-              selectedItem: 0
+              selectedItem: 0,
+              hasPaginated: false
             });
-            this.giphySearchHandler(searchTerm);
+            this.giphySearchHandler();
           }}
         />
         <ResultList
@@ -145,20 +142,20 @@ class App extends Component {
           }}
           onPaginate={dir => {
             let nextPage = this.state.resultsPageIndex + dir;
-            this.setState({ resultsPageIndex: nextPage }, () => {
-              console.log("TERM: ", this.state.searchTerm);
-              this.giphySearchHandler(this.state.searchTerm);
-            });
+            this.setState(
+              { resultsPageIndex: nextPage, hasPaginated: true },
+              () => {
+                this.giphySearchHandler();
+              }
+            );
           }}
         />
         <Spinner showSpinner={!this.state.imageIsLoaded} />
         <Player
           gifs={this.state.gifs}
           selectedGifData={this.state.selectedGifData}
-          currentId={this.state.currentId}
-          selectedItem={this.state.selectedItem}
           searchTerm={this.state.searchTerm}
-          dataIsLoaded={this.state.dataIsLoaded}
+          jsonIsLoaded={this.state.jsonIsLoaded}
           onImageLoaded={() => {
             this.setState({ imageIsLoaded: true });
           }}
