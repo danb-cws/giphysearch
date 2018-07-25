@@ -1,11 +1,12 @@
 .SearchInput {
-  font-size: 3em;
+  font-size: 3rem;
   color: var(--primary-color-inverse);
   background-color: var(--primary-bg-color-inverse);
   padding: 0 var(--primary-horizontal-gutter);
   border: none;
   border-radius: 0;
   outline: none;
+  overflow: auto;
   -webkit-appearance: none;
   -moz-appearance: none;
 }
