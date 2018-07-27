@@ -33,7 +33,7 @@ const Player = props => {
     <div className="Player">
       <img
         className="Player--img"
-        src={mainGif.images.original.url}
+        src={mainGif.images.downsized.url}
         alt={mainGif.title}
         onLoad={props.onImageLoaded}
       />
