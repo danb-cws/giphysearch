@@ -44,17 +44,3 @@
   z-index: 1;
 }
 
-.App-header {
-  font-size: 1rem;
-}
-
-.App-header__title {
-  font-size: 2em;
-  font-weight: normal;
-  margin: 0;
-  text-transform: uppercase;
-}
-.App-header__intro {
-  font-size: 1em;
-  margin: 0;
-}

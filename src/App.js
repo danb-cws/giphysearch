@@ -3,6 +3,7 @@ import "./variables.css";
 import "./base.css";
 import "./App.css";
 import React, { Component } from "react";
+import Header from "./components/Header/";
 import Search from "./components/Search/";
 import Spinner from "./components/Spinner/";
 import Player from "./components/Player/";
@@ -109,13 +110,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-header__title">Giphysearch</h1>
-          <p className="App-header__intro">
-            A React demo by Dan B
-            <a href="https://github.com/danb-cws/giphysearch" className='github-link'>Github</a>
-          </p>
-        </header>
+        <Header />
         <Search
           onSearchTermChange={searchTerm => {
             this.setState({
