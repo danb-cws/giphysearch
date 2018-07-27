@@ -1,3 +1,21 @@
 * {
     box-sizing: border-box;
 }
+
+.github-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 1em;
+    text-indent: -999em;
+    overflow: hidden;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    background: #fff var(--github-logo-b64-url) no-repeat center center;
+    background-size: 1.5em;
+    transition: transform .5s ease-out;
+}
+.github-link:hover {
+    transform: scale(1.3);
+}

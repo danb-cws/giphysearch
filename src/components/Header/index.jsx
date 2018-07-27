@@ -10,6 +10,7 @@ const Header = () => {
         <a
           href="https://github.com/danb-cws/giphysearch"
           className="github-link"
+          title="Github link"
         >
           Github
         </a>
