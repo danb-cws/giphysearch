@@ -5,8 +5,9 @@
   grid-template-columns: 1fr 1fr;
   height: 100%;
   width: 100%;
+  font-size: var(--base-font-size);
 }
-.App--header {
+.App-header {
   grid-row: 3;
   grid-column: 1 / 2;
 }
@@ -20,7 +21,7 @@
         --header-height
       ) var(--header-height);
   }
-  .App--header {
+  .App-header {
     grid-row: 4;
     grid-column: 1/3;
   }
@@ -43,12 +44,17 @@
   z-index: 1;
 }
 
-.App--header {
-  /*color: var(--primary-color);*/
-  /*background-color: var(--primary-bg-color);*/
+.App-header {
+  font-size: 1rem;
 }
 
-.App--title {
-  font-size: 1.5em;
+.App-header__title {
+  font-size: 2em;
+  font-weight: normal;
+  margin: 0;
+  text-transform: uppercase;
+}
+.App-header__intro {
+  font-size: 1em;
   margin: 0;
 }
