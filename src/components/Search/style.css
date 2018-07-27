@@ -1,4 +1,12 @@
-.SearchInput {
+.Search__label{
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.Search__input {
   font-size: 3rem;
   color: var(--primary-color-inverse);
   background-color: var(--primary-bg-color-inverse);
@@ -10,6 +18,6 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.SearchInput::-ms-clear {
+.Search__input::-ms-clear {
   display: none;
 }

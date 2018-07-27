@@ -21,13 +21,16 @@ class Search extends Component {
 
   render() {
     return (
-      <input
-        autoFocus
-        className="SearchInput"
-        label="Search term"
-        value={this.state.searchTerm}
-        onChange={e => this.onInputChange(e.target.value)}
-      />
+      <label className="Search">
+        <span className="Search__label">Search term</span>
+        <input
+          type="text"
+          autoFocus
+          className="Search__input"
+          value={this.state.searchTerm}
+          onChange={e => this.onInputChange(e.target.value)}
+        />
+      </label>
     );
   }
 }
