@@ -5,7 +5,8 @@
 .github-link {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 1em;
+    margin-left: .85em;
+    margin-top: -.25em;
     text-indent: -999em;
     overflow: hidden;
     width: 1.5em;
