@@ -2,18 +2,18 @@
   text-align: center;
   display: grid;
   grid-template-rows: 1fr var(--result-list-height) var(--header-height);
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr auto;
   height: 100%;
   width: 100%;
   font-size: var(--base-font-size);
 }
 .App-header {
   grid-row: 3;
-  grid-column: 1 / 2;
+  grid-column: 2 / 3;
 }
 .Search {
   grid-row: 3;
-  grid-column: 2 / 3;
+  grid-column: 1 / 2;
 }
 @media screen and (orientation: portrait) {
   .App {
