@@ -14,7 +14,8 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-.Paginator:hover {
+.Paginator:hover,
+.Paginator:focus {
   color: var(--control-color-hover);
   background-color: var(--control-bg-color-hover);
 }
