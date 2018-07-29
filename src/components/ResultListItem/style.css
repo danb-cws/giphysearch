@@ -1,11 +1,11 @@
 .ResultList--item {
   list-style: none;
-  width: 16.666667%;
+  width: calc(100% / 6);
   padding: 0 var(--secondary-horizontal-gutter) 0 0;
 }
 @media screen and (orientation: portrait) {
   .ResultList--item {
-    width: 33.333333%;
+    width: calc(100% / 3);
     max-height: 50%;
   }
   .ResultList--item:nth-child(-n + 3) {
@@ -19,6 +19,7 @@
   color: var(--secondary-color);
   background-color: var(--secondary-bg-color);
   cursor: pointer;
+  text-decoration: none;
 }
 .ResultList--item--img {
   max-width: 100%;
