@@ -26,6 +26,7 @@ class Search extends Component {
         <input
           type="text"
           autoFocus
+          tabIndex="1"
           className="Search__input"
           value={this.state.searchTerm}
           onChange={e => this.onInputChange(e.target.value)}
