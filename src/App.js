@@ -119,8 +119,10 @@ class App extends Component {
               selectedItem: 0,
               selectedGifData: {},
               hasPaginated: false
+            },
+            () => {
+              this.giphySearchHandler();
             });
-            this.giphySearchHandler();
           }}
         />
         <ResultList
