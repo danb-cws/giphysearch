@@ -113,16 +113,18 @@ class App extends Component {
         <Header />
         <Search
           onSearchTermChange={searchTerm => {
-            this.setState({
-              searchTerm: searchTerm,
-              resultsPageIndex: 0,
-              selectedItem: 0,
-              selectedGifData: {},
-              hasPaginated: false
-            },
-            () => {
-              this.giphySearchHandler();
-            });
+            this.setState(
+              {
+                searchTerm: searchTerm,
+                resultsPageIndex: 0,
+                selectedItem: 0,
+                selectedGifData: {},
+                hasPaginated: false
+              },
+              () => {
+                this.giphySearchHandler();
+              }
+            );
           }}
         />
         <ResultList
@@ -136,7 +138,9 @@ class App extends Component {
                 selectedItem: index,
                 imageIsLoaded: false
               },
-              this.setImageId(giphyId)
+              () => {
+                this.setImageId(giphyId);
+              }
             );
           }}
           onPaginate={dir => {
