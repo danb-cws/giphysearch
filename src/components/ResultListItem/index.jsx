@@ -14,18 +14,20 @@ const ResultListItem = ({
 
   return (
     <ChildNodeName className="ResultList--item">
-      <a
+      <a href={gif.images.fixed_height_small_still.url}
         className={
           selectedItem === dataIndex
             ? "ResultList--item--link ResultList--item--link__selected-item"
             : "ResultList--item--link"
         }
-        onClick={() => {
+        onClick={(e) => {
+          e.preventDefault();
           if (selectedItem === dataIndex) {
             return;
           }
           onItemSelect(dataIndex, gif.id);
         }}
+        tabIndex={index + 2}
       >
         <img
           className="ResultList--item--img"
