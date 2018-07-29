@@ -16,6 +16,7 @@ const Paginator = props => {
       onClick={() => {
         props.onPaginate(props.dir);
       }}
+      tabIndex={props.tabindex}
     >
       <span
         className={
