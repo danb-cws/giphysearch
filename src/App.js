@@ -43,7 +43,8 @@ class App extends Component {
         this.state.searchTerm
       )}&api_key=${config.GIPHY_API_KEY}&limit=${
         config.RESULTS_PER_PAGE
-      }&offset=${this.state.resultsPageIndex * config.RESULTS_PER_PAGE}`
+      }&offset=${this.state.resultsPageIndex *
+        config.RESULTS_PER_PAGE}&rating=pg-13`
     )
       .then(response => {
         if (response.ok) {
