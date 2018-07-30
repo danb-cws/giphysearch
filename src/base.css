@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+html {
+    font-size: var(--base-font-size);
+}
+
 .github-link {
     display: inline-block;
     vertical-align: middle;

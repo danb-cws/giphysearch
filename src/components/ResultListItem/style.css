@@ -32,9 +32,9 @@
   overflow-x: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  font-size: 0.83rem;
+  font-size: 0.83em;
   line-height: 1.2;
-  margin: 0.2rem 0;
+  margin: 0.2em 0;
 }
 .ResultList--item--link__selected-item {
   color: var(--highlight-color);
