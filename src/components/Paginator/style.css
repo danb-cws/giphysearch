@@ -32,7 +32,7 @@
   font-size: 2em;
   writing-mode: vertical-rl;
 }
-.Paginator__label-fwd {
+.Paginator__label--fwd {
   transform: rotate(180deg);
 }
 
@@ -41,7 +41,7 @@
   .Paginator__label {
     margin-left: -1.45em;
   }
-  .Paginator__label-fwd {
+  .Paginator__label--fwd {
     margin-left: 0.2em;
   }
 }
