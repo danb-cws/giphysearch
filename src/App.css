@@ -5,7 +5,6 @@
   grid-template-columns: 1fr auto;
   height: 100%;
   width: 100%;
-  font-size: var(--base-font-size);
 }
 .App-header {
   grid-row: 3;
