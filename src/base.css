@@ -6,6 +6,12 @@ html {
     font-size: var(--base-font-size);
 }
 
+@media screen and (max-width: 812px) {
+    html {
+        font-size: var(--base-font-size-mobile);
+    }
+}
+
 .github-link {
     display: inline-block;
     vertical-align: middle;
