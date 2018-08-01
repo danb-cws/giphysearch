@@ -3,7 +3,6 @@
   display: flex;
   justify-content: space-between;
   align-items: stretch;
-  overflow: hidden;
   margin-top: var(--secondary-vertical-gutter);
   margin-bottom: var(--secondary-vertical-gutter);
 }
