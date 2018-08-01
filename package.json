@@ -12,8 +12,7 @@
   },
   "browserslist": [
     "last 2 versions",
-    "> 1%",
-    "not IE < 11"
+    "not IE"
   ],
   "scripts": {
     "start": "react-scripts start",
