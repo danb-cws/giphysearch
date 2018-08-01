@@ -25,9 +25,6 @@
   background-color: var(--control-disabled-bg-color);
   cursor: default;
 }
-.Paginator:focus {
-  outline: none;
-}
 .Paginator__label {
   font-size: 2em;
   writing-mode: vertical-rl;
