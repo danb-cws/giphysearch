@@ -9,7 +9,7 @@
   --secondary-color-inverse: #3b3b3b;
   --secondary-bg-color-inverse: #999;
 
-  --highlight-color: #fff;
+  --highlight-color: #3b3b3b;
   --highlight-bg-color: #ffa500;
   --highlight-color-hover: #fff;
   --highlight-bg-color-hover: #ffdd00;
@@ -21,9 +21,17 @@
   --control-disabled-color: #999;
   --control-disabled-bg-color: #ccc;
 
-  /* structural */
+
+  /* type */
   --base-font-size: 16px;
-  --base-font-size-mobile: 8px;
+  --base-font-size-flex: 1.971vmin;
+  --base-font-size-min: 9.36225px;
+
+  /* breakpoints */
+  --max-size-bp: 812px;
+  --min-size-bp: 480px;
+
+    /* structural */
   --result-list-height: 9em;
   --header-height: 5em;
   --pagination-button-width: 3em;

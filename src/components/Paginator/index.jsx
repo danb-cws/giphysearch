@@ -20,7 +20,7 @@ const Paginator = props => {
     >
       <span
         className={
-          "Paginator__label" + (props.dir === 1 ? " Paginator__label-fwd" : "")
+          "Paginator__label" + (props.dir === 1 ? " Paginator__label--fwd" : "")
         }
       >
         {props.children}
