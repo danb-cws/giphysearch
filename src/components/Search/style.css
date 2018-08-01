@@ -44,6 +44,9 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 }
+.Search__input:focus {
+  background-color: var(--control-bg-color);
+}
 .Search__input::-ms-clear {
   display: none;
 }
