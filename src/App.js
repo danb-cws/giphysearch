@@ -102,8 +102,7 @@ class App extends Component {
       })
       .then(json => {
         this.setState({
-          selectedGifData: json.data,
-          imageIsLoaded: false
+          selectedGifData: json.data
         });
       });
   }
@@ -136,8 +135,7 @@ class App extends Component {
           onItemSelect={(index, giphyId) => {
             this.setState(
               {
-                selectedItem: index,
-                imageIsLoaded: false
+                selectedItem: index
               },
               () => {
                 this.setImageId(giphyId);
@@ -145,9 +143,8 @@ class App extends Component {
             );
           }}
           onPaginate={dir => {
-            let nextPage = this.state.resultsPageIndex + dir;
             this.setState(
-              { resultsPageIndex: nextPage, hasPaginated: true },
+              { resultsPageIndex: this.state.resultsPageIndex + dir, hasPaginated: true },
               () => {
                 this.giphySearchHandler();
               }
