@@ -144,7 +144,10 @@ class App extends Component {
           }}
           onPaginate={dir => {
             this.setState(
-              { resultsPageIndex: this.state.resultsPageIndex + dir, hasPaginated: true },
+              {
+                resultsPageIndex: this.state.resultsPageIndex + dir,
+                hasPaginated: true
+              },
               () => {
                 this.giphySearchHandler();
               }
