@@ -101,6 +101,16 @@ class App extends Component {
   };
 
   render() {
+    const {
+      selectedItemIndex,
+      totalResults,
+      resultsPageIndex,
+      imageIsLoaded,
+      gifs,
+      selectedGifData,
+      searchTerm,
+      jsonIsLoaded
+    } = this.state;
     return (
       <div className="App">
         <Header />
@@ -121,10 +131,10 @@ class App extends Component {
           }}
         />
         <ResultList
-          gifs={this.state.gifs}
-          selectedItemIndex={this.state.selectedItemIndex}
-          totalResults={this.state.totalResults}
-          resultsPageIndex={this.state.resultsPageIndex}
+          gifs={gifs}
+          selectedItemIndex={selectedItemIndex}
+          totalResults={totalResults}
+          resultsPageIndex={resultsPageIndex}
           onItemSelect={(index, giphyId) => {
             this.setState(
               {
@@ -138,7 +148,7 @@ class App extends Component {
           onPaginate={dir => {
             this.setState(
               {
-                resultsPageIndex: this.state.resultsPageIndex + dir,
+                resultsPageIndex: resultsPageIndex + dir,
                 hasPaginated: true
               },
               () => {
@@ -147,12 +157,12 @@ class App extends Component {
             );
           }}
         />
-        <Spinner showSpinner={!this.state.imageIsLoaded} />
+        <Spinner showSpinner={!imageIsLoaded} />
         <Player
-          gifs={this.state.gifs}
-          selectedGifData={this.state.selectedGifData}
-          searchTerm={this.state.searchTerm}
-          jsonIsLoaded={this.state.jsonIsLoaded}
+          gifs={gifs}
+          selectedGifData={selectedGifData}
+          searchTerm={searchTerm}
+          jsonIsLoaded={jsonIsLoaded}
           onImageLoaded={() => {
             this.setState({ imageIsLoaded: true });
           }}
