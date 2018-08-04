@@ -25,17 +25,16 @@ class App extends Component {
   };
 
   giphySearchHandler = () => {
+    const { searchTerm, resultsPageIndex, hasPaginated } = this.state;
     this.setState(
       {
         jsonIsLoaded: false
       },
       () => {
         return fetch(
-          `${config.GIPHY_ENDPOINT}search?q=${encodeURI(
-            this.state.searchTerm
-          )}&api_key=${config.GIPHY_API_KEY}&limit=${
-            config.RESULTS_PER_PAGE
-          }&offset=${this.state.resultsPageIndex *
+          `${config.GIPHY_ENDPOINT}search?q=${encodeURI(searchTerm)}&api_key=${
+            config.GIPHY_API_KEY
+          }&limit=${config.RESULTS_PER_PAGE}&offset=${resultsPageIndex *
             config.RESULTS_PER_PAGE}&rating=pg-13`
         )
           .then(response => {
@@ -59,12 +58,12 @@ class App extends Component {
               },
               !gifs.length
                 ? this.setImageId(0) // shows 'no results' page
-                : this.state.resultsPageIndex === 0 && !this.state.hasPaginated
+                : resultsPageIndex === 0 && !hasPaginated
                   ? this.setImageId(gifs[0].id) // select the first one if a new search
                   : null
             )
           )
-          .catch(error => console.error("Fetch error: "+error));
+          .catch(error => console.error("Fetch error: " + error));
       }
     );
   };
