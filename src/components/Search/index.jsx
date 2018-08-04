@@ -15,8 +15,8 @@ class Search extends Component {
     this.props.onSearchTermChange(searchTerm);
   }, 200);
 
-  componentDidMount() {
-    this.onInputChange(this.state.searchTerm); // fire with initial default search term
+  componentDidMount = () => {
+    this.onInputChange(this.state.searchTerm); // fire with initial default search term, if null will show please enter screen
   }
 
   render() {
