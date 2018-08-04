@@ -24,7 +24,7 @@ class App extends Component {
     imageIsLoaded: false
   };
 
-  giphySearchHandler() {
+  giphySearchHandler = () => {
     this.setState(
       {
         jsonIsLoaded: false
@@ -35,7 +35,7 @@ class App extends Component {
         });
       }
     );
-  }
+  };
 
   fetchData = () => {
     return fetch(
@@ -75,7 +75,7 @@ class App extends Component {
       .catch(error => console.error(error));
   };
 
-  setImageId(id) {
+  setImageId = id => {
     if (id === 0) {
       this.setState({
         currentId: 0
@@ -87,9 +87,9 @@ class App extends Component {
       });
       this.fetchPlayerImage(id);
     }
-  }
+  };
 
-  fetchPlayerImage(id) {
+  fetchPlayerImage = id => {
     return fetch(
       `${config.GIPHY_ENDPOINT}${id}?&api_key=${config.GIPHY_API_KEY}`
     )
@@ -105,7 +105,7 @@ class App extends Component {
           selectedGifData: json.data
         });
       });
-  }
+  };
 
   render() {
     return (
