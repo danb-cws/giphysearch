@@ -15,7 +15,7 @@ class App extends Component {
     searchTerm: "",
     gifs: [],
     selectedGifData: {},
-    selectedItem: 0,
+    selectedItemIndex: 0,
     resultsPageIndex: 0,
     totalResults: 0,
     currentId: 0,
@@ -110,7 +110,7 @@ class App extends Component {
               {
                 searchTerm: searchTerm,
                 resultsPageIndex: 0,
-                selectedItem: 0,
+                selectedItemIndex: 0,
                 selectedGifData: {},
                 hasPaginated: false
               },
@@ -122,13 +122,13 @@ class App extends Component {
         />
         <ResultList
           gifs={this.state.gifs}
-          selectedItem={this.state.selectedItem}
+          selectedItemIndex={this.state.selectedItemIndex}
           totalResults={this.state.totalResults}
           resultsPageIndex={this.state.resultsPageIndex}
           onItemSelect={(index, giphyId) => {
             this.setState(
               {
-                selectedItem: index
+                selectedItemIndex: index
               },
               () => {
                 this.setImageId(giphyId);

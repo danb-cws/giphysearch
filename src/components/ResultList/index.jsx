@@ -10,7 +10,7 @@ const ResultList = props => {
       <ResultListItem
         key={gif.id}
         gif={gif}
-        selectedItem={props.selectedItem}
+        selectedItemIndex={props.selectedItemIndex}
         index={index}
         resultsPageIndex={props.resultsPageIndex}
         onItemSelect={props.onItemSelect}

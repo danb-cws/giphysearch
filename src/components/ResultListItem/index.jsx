@@ -4,7 +4,7 @@ import * as config from "../../config";
 
 const ResultListItem = ({
   gif,
-  selectedItem,
+  selectedItemIndex,
   index,
   resultsPageIndex,
   onItemSelect,
@@ -17,13 +17,13 @@ const ResultListItem = ({
       <a
         href={gif.images.fixed_height_small_still.url}
         className={
-          selectedItem === dataIndex
+          selectedItemIndex === dataIndex
             ? "ResultList--item--link ResultList--item--link__selected-item"
             : "ResultList--item--link"
         }
         onClick={e => {
           e.preventDefault();
-          if (selectedItem === dataIndex) {
+          if (selectedItemIndex === dataIndex) {
             return;
           }
           onItemSelect(dataIndex, gif.id);
