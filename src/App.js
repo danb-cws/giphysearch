@@ -30,49 +30,43 @@ class App extends Component {
         jsonIsLoaded: false
       },
       () => {
-        this.fetchData().catch(e => {
-          console.error("Error fetching data: ", e);
-        });
+        return fetch(
+          `${config.GIPHY_ENDPOINT}search?q=${encodeURI(
+            this.state.searchTerm
+          )}&api_key=${config.GIPHY_API_KEY}&limit=${
+            config.RESULTS_PER_PAGE
+          }&offset=${this.state.resultsPageIndex *
+            config.RESULTS_PER_PAGE}&rating=pg-13`
+        )
+          .then(response => {
+            if (response.ok) {
+              return response.json();
+            } else {
+              throw new Error(response.statusText);
+            }
+          })
+          .then(json => {
+            this.setState({
+              totalResults: json.pagination.total_count
+            });
+            return json.data;
+          })
+          .then(gifs =>
+            this.setState(
+              {
+                gifs,
+                jsonIsLoaded: true
+              },
+              !gifs.length
+                ? this.setImageId(0) // shows 'no results' page
+                : this.state.resultsPageIndex === 0 && !this.state.hasPaginated
+                  ? this.setImageId(gifs[0].id) // select the first one if a new search
+                  : null
+            )
+          )
+          .catch(error => console.error(error));
       }
     );
-  };
-
-  fetchData = () => {
-    return fetch(
-      `${config.GIPHY_ENDPOINT}search?q=${encodeURI(
-        this.state.searchTerm
-      )}&api_key=${config.GIPHY_API_KEY}&limit=${
-        config.RESULTS_PER_PAGE
-      }&offset=${this.state.resultsPageIndex *
-        config.RESULTS_PER_PAGE}&rating=pg-13`
-    )
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error(response.statusText);
-        }
-      })
-      .then(json => {
-        this.setState({
-          totalResults: json.pagination.total_count
-        });
-        return json.data;
-      })
-      .then(gifs =>
-        this.setState(
-          {
-            gifs,
-            jsonIsLoaded: true
-          },
-          !gifs.length
-            ? this.setImageId(0)
-            : this.state.resultsPageIndex === 0 && !this.state.hasPaginated
-              ? this.setImageId(gifs[0].id)
-              : null
-        )
-      )
-      .catch(error => console.error(error));
   };
 
   setImageId = id => {
