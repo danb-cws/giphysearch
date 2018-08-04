@@ -25,7 +25,7 @@ class Search extends Component {
         <span className="Search__label">Search term</span>
         <input
           type="text"
-          autoFocus
+          autoFocus="true"
           tabIndex="1"
           className="Search__input"
           value={this.state.searchTerm}
