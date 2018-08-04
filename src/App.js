@@ -64,7 +64,7 @@ class App extends Component {
                   : null
             )
           )
-          .catch(error => console.error(error));
+          .catch(error => console.error("Fetch error: "+error));
       }
     );
   };
