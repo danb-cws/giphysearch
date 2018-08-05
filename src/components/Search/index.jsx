@@ -6,6 +6,10 @@ import "./style.css";
 class Search extends Component {
   state = { searchTerm: config.default_term };
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextState.searchTerm !== this.state.searchTerm;
+  }
+
   onInputChange = searchTerm => {
     this.setState({ searchTerm }); // dont want to debounce this as the controlled input gets laggy
     this.debouncedOnInputChange(searchTerm);
@@ -17,7 +21,8 @@ class Search extends Component {
 
   componentDidMount = () => {
     this.onInputChange(this.state.searchTerm); // fire with initial default search term, if null will show please enter screen
-  }
+    this._input.focus();
+  };
 
   render() {
     return (
@@ -30,6 +35,7 @@ class Search extends Component {
           className="Search__input"
           value={this.state.searchTerm}
           onChange={e => this.onInputChange(e.target.value)}
+          ref={c => (this._input = c)}
         />
       </label>
     );
