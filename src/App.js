@@ -5,9 +5,10 @@ import "./App.css";
 import React, { Component } from "react";
 import Header from "./components/Header/";
 import Search from "./components/Search/";
-import Spinner from "./components/Spinner/";
+//import Spinner from "./components/Spinner/";
 import Player from "./components/Player/";
 import ResultList from "./components/ResultList/";
+import ErrorScreen from "./components/ErrorScreen/";
 import * as config from "./config";
 
 class App extends Component {
@@ -75,29 +76,9 @@ class App extends Component {
       });
     } else {
       this.setState({
-        currentId: id,
-        imageIsLoaded: false
+        currentId: id
       });
-      this.fetchPlayerImage(id);
     }
-  };
-
-  fetchPlayerImage = id => {
-    return fetch(
-      `${config.GIPHY_ENDPOINT}${id}?&api_key=${config.GIPHY_API_KEY}`
-    )
-      .then(response => {
-        if (response.ok) {
-          return response.json();
-        } else {
-          throw new Error(response.statusText);
-        }
-      })
-      .then(json => {
-        this.setState({
-          selectedGifData: json.data
-        });
-      });
   };
 
   render() {
@@ -105,9 +86,9 @@ class App extends Component {
       selectedItemIndex,
       totalResults,
       resultsPageIndex,
-      imageIsLoaded,
       gifs,
       selectedGifData,
+      currentId,
       searchTerm,
       jsonIsLoaded
     } = this.state;
@@ -136,14 +117,10 @@ class App extends Component {
           totalResults={totalResults}
           resultsPageIndex={resultsPageIndex}
           onItemSelect={(index, giphyId) => {
-            this.setState(
-              {
-                selectedItemIndex: index
-              },
-              () => {
-                this.setImageId(giphyId);
-              }
-            );
+            this.setState({
+              selectedItemIndex: index,
+              currentId: giphyId
+            });
           }}
           onPaginate={dir => {
             this.setState(
@@ -157,16 +134,13 @@ class App extends Component {
             );
           }}
         />
-        <Spinner showSpinner={!imageIsLoaded} />
-        <Player
+        <ErrorScreen
           gifs={gifs}
           selectedGifData={selectedGifData}
           searchTerm={searchTerm}
           jsonIsLoaded={jsonIsLoaded}
-          onImageLoaded={() => {
-            this.setState({ imageIsLoaded: true });
-          }}
         />
+        <Player currentId={currentId} />
       </div>
     );
   }
