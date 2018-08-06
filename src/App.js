@@ -5,7 +5,6 @@ import "./App.css";
 import React, { Component } from "react";
 import Header from "./components/Header/";
 import Search from "./components/Search/";
-//import Spinner from "./components/Spinner/";
 import Player from "./components/Player/";
 import ResultList from "./components/ResultList/";
 import ErrorScreen from "./components/ErrorScreen/";
