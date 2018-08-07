@@ -53,7 +53,7 @@ class Player extends Component {
 
   render() {
     if (this.isEmpty(this.state.mainGif)) {
-      return <div className="Player Player--loadingtext">?Loading json...</div>;
+      return <div className="Player">Loading json...</div>;
     }
     return (
       <div className="Player">

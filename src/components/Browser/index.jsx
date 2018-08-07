@@ -49,7 +49,9 @@ class Browser extends Component {
                 jsonIsLoaded: true
               },
               !gifs.length
-                ? this.setImageId(0) // shows 'no results' page
+                ? this.setState({
+                    currentId: 0
+                  }) // shows 'no results' page
                 : resultsPageIndex === 0 && !hasPaginated
                   ? this.props.onSetImageId(gifs[0].id) // select the first one if a new search
                   : null
@@ -58,18 +60,6 @@ class Browser extends Component {
           .catch(error => console.error("Fetch error: " + error));
       }
     );
-  };
-
-  setImageId = id => {
-    if (id === 0) {
-      this.setState({
-        currentId: 0
-      });
-    } else {
-      this.setState({
-        currentId: id
-      });
-    }
   };
 
   render() {
@@ -109,7 +99,9 @@ class Browser extends Component {
                 selectedItemIndex: index,
                 currentId: giphyId
               },
-              () => {this.props.onSetImageId(giphyId)}
+              () => {
+                this.props.onSetImageId(giphyId);
+              }
             );
           }}
           onPaginate={dir => {
