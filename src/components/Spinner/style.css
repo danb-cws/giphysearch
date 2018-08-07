@@ -1,7 +1,9 @@
 .Spinner {
   background: rgba(0, 0, 0, 0.9) var(--spinner-b64-url) no-repeat center center;
-  width: 100%;
-  height: 100%;
   position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
   z-index: 99;
 }
