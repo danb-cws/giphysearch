@@ -52,16 +52,17 @@ class Player extends Component {
   };
 
   render() {
-    if (this.isEmpty(this.state.mainGif)) {
+    const { mainGif, imageIsLoaded } = this.state;
+    if (this.isEmpty(mainGif)) {
       return <div className="Player">Loading json...</div>;
     }
     return (
       <div className="Player">
-        <Spinner showSpinner={!this.state.imageIsLoaded} />
+        <Spinner showSpinner={!imageIsLoaded} />
         <img
           className="Player--img"
-          src={this.state.mainGif.images.downsized.url}
-          alt={this.state.mainGif.title}
+          src={mainGif.images.downsized.url}
+          alt={mainGif.title}
           onLoad={this.hideSpinner}
         />
       </div>
