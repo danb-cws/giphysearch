@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./style.css";
 import * as config from "../../config";
 import Search from "../Search";
 import ResultList from "../ResultList";
@@ -77,7 +76,7 @@ class Browser extends Component {
           onSearchTermChange={searchTerm => {
             this.setState(
               {
-                searchTerm: searchTerm,
+                searchTerm,
                 resultsPageIndex: 0,
                 selectedItemIndex: 0,
                 hasPaginated: false
