@@ -9,7 +9,6 @@ class Browser extends Component {
   state = {
     searchTerm: "",
     gifs: [],
-    selectedGifData: {},
     selectedItemIndex: 0,
     resultsPageIndex: 0,
     totalResults: 0,
@@ -79,7 +78,6 @@ class Browser extends Component {
       totalResults,
       resultsPageIndex,
       gifs,
-      selectedGifData,
       searchTerm,
       jsonIsLoaded
     } = this.state;
@@ -92,7 +90,6 @@ class Browser extends Component {
                 searchTerm: searchTerm,
                 resultsPageIndex: 0,
                 selectedItemIndex: 0,
-                selectedGifData: {},
                 hasPaginated: false
               },
               () => {
@@ -112,7 +109,7 @@ class Browser extends Component {
                 selectedItemIndex: index,
                 currentId: giphyId
               },
-              this.props.onSetImageId(giphyId)
+              () => {this.props.onSetImageId(giphyId)}
             );
           }}
           onPaginate={dir => {
@@ -129,7 +126,6 @@ class Browser extends Component {
         />
         <ErrorScreen
           gifs={gifs}
-          selectedGifData={selectedGifData}
           searchTerm={searchTerm}
           jsonIsLoaded={jsonIsLoaded}
         />
