@@ -33,7 +33,7 @@ const ResultListItem = ({
         <img
           className="ResultList--item--img"
           src={gif.images.fixed_height_small_still.url}
-          alt={gif.title}
+          alt={gif.title || ''}
         />
         <h5 className="ResultList--item--title">{gif.title || "(No title)"}</h5>
       </a>
