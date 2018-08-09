@@ -1,16 +1,14 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { configure, shallow } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 import Header from "./";
 
-it("Header smoke test", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Header />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+configure({ adapter: new Adapter() });
 
-it("Header contains H1: Giphysearch", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Header />, div);
-  expect(div.contains(<h1 className="App-header__title">Giphysearch</h1>)).toBeTruthy;
-  ReactDOM.unmountComponentAtNode(div);
+describe("Header tests", () => {
+  it("Shows H1", () => {
+    const el = shallow(<Header />);
+    expect(el.contains(<h1 className="App-header__title">Giphysearch</h1>)).toBe(true);
+  });
+
 });
