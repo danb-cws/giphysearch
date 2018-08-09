@@ -1,23 +1,19 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import { configure, shallow } from "enzyme";
+import Adapter from "enzyme-adapter-react-16";
 import Spinner from "./";
 
-it("Spinner smoke test", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Spinner />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+configure({ adapter: new Adapter() });
 
-/*it("Renders spinner when truthy showSpinner arg passed in", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Spinner showSpinner={true}/>, div);
-  expect(div.contains(<div className="Spinner" />)).toBeTruthy;
-  ReactDOM.unmountComponentAtNode(div);
-});
+describe("Spinner tests", () => {
+  it("Shows spinner if showSpinner is true", () => {
+    const el = shallow(<Spinner showSpinner={true} />);
 
-it("Dosnt render spinner when falsy showSpinner arg passed in", () => {
-  const div = document.createElement("div");
-  ReactDOM.render(<Spinner showSpinner={false}/>, div);
-  expect(div.contains(null)).toBeTruthy;
-  ReactDOM.unmountComponentAtNode(div);
-});*/
+    expect(el.contains(<div className="Spinner" />)).toBe(true);
+  });
+  it("Renders nothing if showSpinner is false", () => {
+    const el = shallow(<Spinner showSpinner={false} />);
+
+    expect(el.find(Spinner).exists()).toEqual(false);
+  });
+});
