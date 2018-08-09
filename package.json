@@ -20,5 +20,9 @@
     "eject": "react-scripts eject",
     "deploy": "firebase deploy --project giphysearch-danb",
     "release": "npm run build && npm run deploy"
+  },
+  "devDependencies": {
+    "enzyme": "^3.4.1",
+    "enzyme-adapter-react-16": "^1.2.0"
   }
 }
