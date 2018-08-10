@@ -4,7 +4,7 @@ import Spinner from "../Spinner/";
 import * as config from "config";
 
 class Player extends Component {
-  state = { localCurrId: undefined, mainGif: {}, imageIsLoaded: true };
+  state = { localCurrId: undefined, mainGif: {}, imageIsLoaded: undefined };
 
   fetchPlayerImage = () => {
     fetch(
@@ -44,8 +44,8 @@ class Player extends Component {
 
   componentDidUpdate = () => {
     if (
-      this.props.currentId !== 0 &&
-      this.props.currentId !== this.state.localCurrId
+      this.props.currentId !== 0 && // ie. not no term or no results
+      this.props.currentId !== this.state.localCurrId // prevent the fetch on every render if id unchanged
     ) {
       this.fetchPlayerImage(this.props.currentId);
     }
