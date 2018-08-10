@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.css";
-import * as config from "../../config";
+import * as config from "config";
 
 const ResultListItem = ({
   gif,

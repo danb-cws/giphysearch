@@ -1,7 +1,7 @@
 import React from "react";
 import ResultListItem from "../ResultListItem";
 import Paginator from "../Paginator";
-import * as config from "../../config";
+import * as config from "config";
 import "./style.css";
 
 const ResultList = props => {

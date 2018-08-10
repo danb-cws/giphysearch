@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as config from "../../config";
+import * as config from "config";
 import debounce from "debounce";
 import "./style.css";
 

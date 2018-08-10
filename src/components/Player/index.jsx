@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import Spinner from "../Spinner/";
-import * as config from "../../config";
+import * as config from "config";
 
 class Player extends Component {
   state = { localCurrId: undefined, mainGif: {}, imageIsLoaded: true };

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import * as config from "../../config";
+import * as config from "config";
 import Search from "../Search";
 import ResultList from "../ResultList";
 import ErrorScreen from "../ErrorScreen";

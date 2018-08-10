@@ -1,5 +1,5 @@
 import React from "react";
-import * as config from "../../config";
+import * as config from "config";
 import "./style.css";
 
 const Paginator = props => {
