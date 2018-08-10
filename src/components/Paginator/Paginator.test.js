@@ -16,7 +16,7 @@ const el = shallow(
 );
 
 describe("Paginator tests", () => {
-  it("Renders thePaginatorr component", () => {
+  it("Renders the Paginator component", () => {
     expect(el.exists()).toBe(true);
   });
 });
