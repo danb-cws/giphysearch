@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 import Spinner from "../Spinner/";
+import ShareTool from "../ShareTool/";
 import * as config from "config";
 
 class Player extends Component {
@@ -59,6 +60,7 @@ class Player extends Component {
     return (
       <div className="Player">
         <Spinner showSpinner={!imageIsLoaded} />
+        <ShareTool />
         <img
           className="Player--img"
           src={mainGif.images.downsized.url}

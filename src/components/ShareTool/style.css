@@ -1,5 +1,9 @@
 .ShareTool {
-  font-size: .9rem;
-  padding: 0.9em 2em 0 2em;
-  background-color: var(--secondary-bg-color);
+  font-size: 1rem;
+  color: var(--secondary-bg-color);
+  background-color: red;
+  position: absolute;
+  right: var(--primary-horizontal-gutter);
+  bottom: var(--primary-vertical-gutter);
+  z-index: 98;
 }
