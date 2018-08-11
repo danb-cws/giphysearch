@@ -2,7 +2,7 @@ import React from "react";
 import { configure, shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-16";
 import ResultListItem from "./";
-import testjson from "./gifMock.json";
+import testjson from "mock_json/gifMock.json";
 import * as config from "config";
 
 configure({ adapter: new Adapter() });
