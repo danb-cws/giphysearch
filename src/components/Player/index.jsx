@@ -60,7 +60,7 @@ class Player extends Component {
     return (
       <div className="Player">
         <Spinner showSpinner={!imageIsLoaded} />
-        <ShareTool />
+        <ShareTool shareUrl={mainGif.embed_url} />
         <img
           className="Player--img"
           src={mainGif.images.downsized.url}
