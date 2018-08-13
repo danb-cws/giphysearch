@@ -1,9 +1,24 @@
-.ShareTool {
+.ShareTool--open-button {
   font-size: 1rem;
-  color: var(--secondary-bg-color);
-  background-color: red;
+  background-image: var(--share-icon-b64-url);
+  background-size: cover;
+  background-color: transparent;
+  width: 2em;
+  height: 2em;
+  border: none;
+  -webkit-appearance: none;
+  cursor: pointer;
   position: absolute;
   right: var(--primary-horizontal-gutter);
   bottom: var(--primary-vertical-gutter);
-  z-index: 98;
+  z-index: 1;
+}
+.ShareTool--panel {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  right: 2em;
+  bottom: 2em;
+  padding: 2em;
+  background: black;color: white;
 }
