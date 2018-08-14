@@ -53,6 +53,7 @@ class ShareTool extends Component {
     document.execCommand("copy");
     e.target.focus();
     this.setState({ copySuccess: "Copied!" });
+    setTimeout(this.hideTool, 2000);
   };
 
   render() {
@@ -61,7 +62,7 @@ class ShareTool extends Component {
     ) : (
       <div className="modal" onClick={this.closeTool}>
         <section className="ShareTool--panel">
-          <h3>Embed url:</h3>
+          <h3 className="ShareTool--title">Giphy embed URL:</h3>
           <textarea
             className="ShareTool--textarea"
             ref={textarea => (this.textArea = textarea)}
@@ -72,13 +73,10 @@ class ShareTool extends Component {
               className="ShareTool--button"
               onClick={this.copyToClipboard}
             >
-              Copy url to clipboard
+              Copy URL to clipboard
             </button>
           )}
-          <p>{this.state.copySuccess}</p>
-          <button className="ShareTool--button" onClick={this.hideTool}>
-            Close
-          </button>
+          <div className="ShareTool--copy-success">{this.state.copySuccess}</div>
         </section>
       </div>
     );
