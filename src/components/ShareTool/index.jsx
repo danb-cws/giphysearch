@@ -38,8 +38,8 @@ class ShareTool extends Component {
           <textarea
             className="ShareTool--textarea"
             ref={textarea => (this.textArea = textarea)}
+            defaultValue={this.props.shareUrl}
           >
-            {this.props.shareUrl}
           </textarea>
           {document.queryCommandSupported("copy") && (
             <button

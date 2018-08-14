@@ -20,8 +20,8 @@
   right: 2em;
   bottom: 2em;
   padding: 2em;
-  background: black;
-  color: white;
+  background: var(--primary-bg-color-inverse);
+  color: var(--primary-color-inverse);
 }
 
 .modal {
@@ -45,15 +45,18 @@
   left: 0;
 }
 .modal:after {
-  content: "x";
+  content: "";
   width: var(--modal-close-size);
   height: var(--modal-close-size);
   position: absolute;
   z-index: 3;
   top: calc(50% - (var(--modal-height) / 2) + var(--modal-close-size));
   right: calc(50% - (var(--modal-width) / 2) - var(--modal-close-size));
-  color: white;
-  background-color: blue;
+  background-color: var(--control-bg-color);
+  background-image: var(--close-icon-b64-url);
+  background-size: 80%;
+  background-position: center;
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 .modal > * {
