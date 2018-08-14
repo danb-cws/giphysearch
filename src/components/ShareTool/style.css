@@ -14,14 +14,16 @@
   z-index: 1;
 }
 .ShareTool--panel {
-  top: 2rem;
-  left: 2rem;
+  font-size: 1rem;
+  top: 2em;
+  left: 2em;
   right: 2em;
   padding: 2em;
   background: var(--primary-bg-color-inverse);
   color: var(--primary-color-inverse);
 }
 .ShareTool--title {
+  font-size: 1.4em;
   margin-top: 0;
 }
 .ShareTool--textarea {
@@ -43,9 +45,15 @@
   -moz-appearance: none;
 }
 .ShareTool--copy-success {
+  font-weight: 700;
+  font-size: 1.8em;
   margin-top: var(--primary-horizontal-gutter);
 }
 .modal {
+  --modal-width: 48%;
+  --modal-height: 17em;
+  --modal-close-size: 2em;
+  font-size: 1rem;
   position: fixed;
   z-index: 1;
   top: 0;

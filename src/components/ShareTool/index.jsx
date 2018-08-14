@@ -73,7 +73,7 @@ class ShareTool extends Component {
               className="ShareTool--button"
               onClick={this.copyToClipboard}
             >
-              Copy URL to clipboard
+              Copy to clipboard
             </button>
           )}
           <div className="ShareTool--copy-success">{this.state.copySuccess}</div>
