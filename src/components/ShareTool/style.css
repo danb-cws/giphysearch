@@ -65,29 +65,3 @@
   width: var(--modal-width);
   height: var(--modal-height);
 }
-/*
-	.any-custom-class {
-		background: lavenderblush;
-		padding: 1rem;
-	}
-
-	</style>
-</head>
-
-<body>
-
-
-
-<div class="modal" onclick="event.target.classList.contains('modal') ? this.parentNode.removeChild(this) : null;">
-	<div class="any-custom-class">
-		<div>Some content</div>
-		<div>Maybe a <a href="http://www.google.com?q=cats">link</a>?</div>
-	</div>
-</div>
-
-<p>
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod 	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, 	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse 	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-</p>
-
-</body>
-</html>*/
