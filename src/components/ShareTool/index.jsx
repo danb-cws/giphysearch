@@ -18,7 +18,7 @@ class ShareTool extends Component {
   };
 
   hideTool = () => {
-    this.setState({ isShowing: false });
+    this.setState({ isShowing: false, copySuccess: "" });
   };
 
   copyToClipboard = e => {
@@ -26,19 +26,19 @@ class ShareTool extends Component {
     if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
       // save current contentEditable/readOnly status
       const el = this.textArea;
-      var editable = el.contentEditable;
-      var readOnly = el.readOnly;
+      const editable = el.contentEditable;
+      const readOnly = el.readOnly;
 
       // convert to editable with readonly to stop iOS keyboard opening
       el.contentEditable = true;
       el.readOnly = true;
 
       // create a selectable range
-      var range = document.createRange();
+      const range = document.createRange();
       range.selectNodeContents(el);
 
       // select the range
-      var selection = window.getSelection();
+      const selection = window.getSelection();
       selection.removeAllRanges();
       selection.addRange(range);
       el.setSelectionRange(0, 999999);
