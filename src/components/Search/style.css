@@ -1,6 +1,8 @@
 .Search {
   position: relative;
   font-size: 1rem;
+  color: var(--primary-color-inverse);
+  background-color: var(--primary-bg-color-inverse);
 }
 .Search:before {
   /*circle of magnify icon*/
@@ -35,8 +37,6 @@
 }
 .Search__input {
   font-size: 3em;
-  color: var(--primary-color-inverse);
-  background-color: var(--primary-bg-color-inverse);
   padding: 0 var(--primary-horizontal-gutter) 0 1.5em;
   border: none;
   border-radius: 0;

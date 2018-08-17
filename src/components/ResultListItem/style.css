@@ -3,6 +3,7 @@
   width: 16.666667%;
   height: 100%;
   padding: 0 var(--secondary-horizontal-gutter) 0 0;
+  background-color: var(--primary-bg-color);
 }
 @media screen and (orientation: portrait) {
   .ResultList--item {
@@ -20,7 +21,7 @@
   height: 100%;
   padding: var(--secondary-vertical-gutter) var(--secondary-horizontal-gutter);
   color: var(--secondary-color);
-  background-color: var(--secondary-bg-color);
+  background-color: var(--tertiary-color);
   cursor: pointer;
   text-decoration: none;
 }

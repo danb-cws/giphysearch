@@ -12,15 +12,16 @@
   right: var(--primary-horizontal-gutter);
   bottom: var(--primary-vertical-gutter);
   z-index: 1;
+  transition: var(--default-transition);
+}
+.ShareTool--open-button:hover {
+    transform: scale(1.3);
 }
 .ShareTool--panel {
   font-size: 1rem;
-  top: 2em;
-  left: 2em;
-  right: 2em;
   padding: 2em;
   background: var(--primary-bg-color-inverse);
-  color: var(--primary-color-inverse);
+  color: var(--light-default);
 }
 .ShareTool--title {
   font-size: 1.4em;
@@ -50,7 +51,7 @@
   margin-top: var(--primary-horizontal-gutter);
 }
 .modal {
-  --modal-width: 48%;
+  --modal-width: 54%;
   --modal-height: 17em;
   --modal-close-size: 2em;
   font-size: 1rem;
@@ -79,8 +80,8 @@
   height: var(--modal-close-size);
   position: absolute;
   z-index: 3;
-  top: calc(50% - (var(--modal-height) / 2) + var(--modal-close-size));
-  right: calc(50% - (var(--modal-width) / 2) - var(--modal-close-size));
+  top: calc(50% - (var(--modal-height) / 2));
+  right: calc(50% - (var(--modal-width) / 2));
   background-color: var(--control-bg-color);
   background-image: var(--close-icon-b64-url);
   background-size: 80%;

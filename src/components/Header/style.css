@@ -1,7 +1,8 @@
 .App-header {
   font-size: .9rem;
   padding: 0.9em 2em 0 2em;
-  background-color: var(--secondary-bg-color);
+  color: var(--light-default);
+  background-color: var(--primary-bg-color);
 }
 
 .App-header__title {
@@ -13,4 +14,22 @@
 .App-header__intro {
   font-size: 1em;
   margin: .2em 0 0;
+}
+.github-link {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: .85em;
+    margin-top: -.25em;
+    text-indent: -999em;
+    overflow: hidden;
+    width: 1.5em;
+    height: 1.5em;
+    border: 1px solid var(--light-default);
+    border-radius: 50%;
+    background: var(--light-default) var(--github-logo-b64-url) no-repeat center center;
+    background-size: 1.5em;
+    transition: var(--default-transition);
+}
+.github-link:hover {
+    transform: scale(1.3);
 }
