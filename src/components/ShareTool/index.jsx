@@ -69,14 +69,18 @@ class ShareTool extends Component {
             defaultValue={this.props.shareUrl}
           />
           {document.queryCommandSupported("copy") && (
-            <button
-              className="ShareTool--button"
-              onClick={this.copyToClipboard}
-            >
-              Copy to clipboard
-            </button>
+            <React.Fragment>
+              <button
+                className="ShareTool--button"
+                onClick={this.copyToClipboard}
+              >
+                Copy to clipboard
+              </button>
+              <div className="ShareTool--copy-success">
+                {this.state.copySuccess}
+              </div>
+            </React.Fragment>
           )}
-          <div className="ShareTool--copy-success">{this.state.copySuccess}</div>
         </section>
       </div>
     );
