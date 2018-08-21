@@ -1,7 +1,6 @@
 import React from "react";
 import ResultListItem from "../ResultListItem";
 import Paginator from "../Paginator";
-import * as config from "config";
 import "./style.css";
 
 const ResultList = props => {
@@ -25,7 +24,6 @@ const ResultList = props => {
         totalResults={props.totalResults}
         resultsPageIndex={props.resultsPageIndex}
         dir={-1}
-        tabindex={config.RESULTS_PER_PAGE + 3}
       >
         Prev
       </Paginator>
@@ -41,7 +39,6 @@ const ResultList = props => {
         totalResults={props.totalResults}
         resultsPageIndex={props.resultsPageIndex}
         dir={1}
-        tabindex={config.RESULTS_PER_PAGE + 2}
       >
         Next
       </Paginator>

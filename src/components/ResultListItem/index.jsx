@@ -28,7 +28,6 @@ const ResultListItem = ({
           }
           onItemSelect(dataIndex, gif.id);
         }}
-        tabIndex={index + 2}
       >
         <img
           className="ResultList--item--img"
