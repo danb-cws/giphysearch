@@ -11,7 +11,7 @@ const ErrorScreen = props => {
       </div>
     );
   } else if (!props.isOnline) {
-    return <div className="ErrorScreen">No connection</div>;
+    return <div className="ErrorScreen">No data connection</div>;
   } else {
     return null;
   }
