@@ -5,11 +5,13 @@ const ErrorScreen = props => {
   if (props.gifs.length === 0 && props.jsonIsLoaded) {
     return (
       <div className="ErrorScreen">
-          {!props.searchTerm
-            ? "Please enter a term in the search field"
-            : `No gifs available for "${props.searchTerm}"`}
+        {!props.searchTerm
+          ? "Please enter a term in the search field"
+          : `No gifs available for "${props.searchTerm}"`}
       </div>
     );
+  } else if (!props.isOnline) {
+    return <div className="ErrorScreen">No connection</div>;
   } else {
     return null;
   }

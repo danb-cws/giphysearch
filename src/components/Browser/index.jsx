@@ -12,7 +12,8 @@ class Browser extends Component {
     resultsPageIndex: 0,
     totalResults: 0,
     hasPaginated: false,
-    jsonIsLoaded: false
+    jsonIsLoaded: false,
+    isOnline: true
   };
 
   giphySearchHandler = () => {
@@ -61,6 +62,15 @@ class Browser extends Component {
     );
   };
 
+  handleConnectivity = e => {
+    this.setState({ isOnline: e.type === "online" ? true : false });
+  };
+
+  componentDidMount() {
+    window.addEventListener("online", this.handleConnectivity);
+    window.addEventListener("offline", this.handleConnectivity);
+  }
+
   render() {
     const {
       selectedItemIndex,
@@ -68,7 +78,8 @@ class Browser extends Component {
       resultsPageIndex,
       gifs,
       searchTerm,
-      jsonIsLoaded
+      jsonIsLoaded,
+      isOnline
     } = this.state;
     return (
       <React.Fragment>
@@ -93,6 +104,9 @@ class Browser extends Component {
           totalResults={totalResults}
           resultsPageIndex={resultsPageIndex}
           onItemSelect={(index, giphyId) => {
+            if (!this.state.isOnline) {
+              return;
+            }
             this.setState(
               {
                 selectedItemIndex: index,
@@ -104,6 +118,9 @@ class Browser extends Component {
             );
           }}
           onPaginate={dir => {
+            if (!this.state.isOnline) {
+              return;
+            }
             this.setState(
               {
                 resultsPageIndex: resultsPageIndex + dir,
@@ -119,6 +136,7 @@ class Browser extends Component {
           gifs={gifs}
           searchTerm={searchTerm}
           jsonIsLoaded={jsonIsLoaded}
+          isOnline={isOnline}
         />
       </React.Fragment>
     );
