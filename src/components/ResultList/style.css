@@ -15,7 +15,7 @@
   padding: 0;
 }
 .ResultList--no-results {
-  color: var(--primary-color-inverse);
+  color: var(--light-default);
   background-color: var(--primary-bg-color-inverse);
   display: flex;
   height: 100%;
