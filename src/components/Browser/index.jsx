@@ -12,7 +12,7 @@ class Browser extends Component {
     resultsPageIndex: 0,
     totalResults: 0,
     hasPaginated: false,
-    jsonIsLoaded: false,
+    jsonIsLoaded: true,
     isOnline: true
   };
 

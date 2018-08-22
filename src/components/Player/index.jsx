@@ -4,6 +4,8 @@ import Spinner from "../Spinner/";
 import ShareTool from "../ShareTool/";
 import * as config from "config";
 
+// TODO: us prev props/state instead of localCurrId, set toggle on didmount to stop first render 'json'
+
 class Player extends Component {
   state = { localCurrId: undefined, mainGif: {}, imageIsLoaded: undefined };
 
@@ -54,6 +56,9 @@ class Player extends Component {
 
   render() {
     const { mainGif, imageIsLoaded } = this.state;
+    if (this.props.currentId === 0) {
+      return null;
+    }
     if (this.isEmpty(mainGif)) {
       return <div className="Player">Loading json...</div>;
     }

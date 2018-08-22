@@ -20,8 +20,11 @@ class Search extends Component {
   }, 200);
 
   componentDidMount = () => {
-    this.onInputChange(this.state.searchTerm); // fire with initial default search term, if null will show please enter screen
-    this._input.focus();
+    if (this.state.searchTerm === "") {
+      this._input.focus();
+      return;
+    }
+    this.onInputChange(this.state.searchTerm); // if not empty, fire with initial default search term
   };
 
   render() {
