@@ -19,13 +19,13 @@ class Search extends Component {
     this.props.onSearchTermChange(searchTerm);
   }, 200);
 
-  componentDidMount = () => {
+  componentDidMount() {
     if (this.state.searchTerm === "") {
       this._input.focus();
       return;
     }
     this.onInputChange(this.state.searchTerm); // if not empty, fire with initial default search term
-  };
+  }
 
   render() {
     return (

@@ -45,14 +45,14 @@ class Player extends Component {
     });
   };
 
-  componentDidUpdate = () => {
+  componentDidUpdate() {
     if (
       this.props.currentId !== 0 && // ie. not 'no term' or 'no results'
       this.props.currentId !== this.state.localCurrId // prevent the fetch on every render if id unchanged
     ) {
       this.fetchPlayerImage(this.props.currentId);
     }
-  };
+  }
 
   render() {
     const { mainGif, imageIsLoaded } = this.state;
