@@ -67,6 +67,7 @@ class Browser extends Component {
   };
 
   componentDidMount() {
+    this.setState({ isOnline: navigator.onLine ? true : false });
     window.addEventListener("online", this.handleConnectivity);
     window.addEventListener("offline", this.handleConnectivity);
   }
