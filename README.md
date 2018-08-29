@@ -12,9 +12,9 @@ It's currently using the Giphy open beta API key which still seems to work, and 
 
 ## I'm liking:
 
-- React 16.3, the whole CRA experience, object properties.
+- React 16.3 and the whole 'CRA' experience.
 - Prettier (with defaults) is a little strange first off but I have quickly grown to love it.
-- Grid is just grrreat!
+- Grid is grrreat!
 
 ## React
 
@@ -27,13 +27,12 @@ It's currently using the Giphy open beta API key which still seems to work, and 
 - Uses grid with portrait/landscape views set in media queries.
 - Fluid sized type between a min and max (entire UI scales on the base font size).
 
-#### IE11 :(
+##### IE11 :(
 
-The React code all functions fine, the layout doesn't, but it could... because:
+The React code all functions fine, the layout doesn't, but it could if I could be bothered... via:
 
 - The grid prefixes for IE11 are not added by Autoprefixer, to resolve this one would need to pass 'grid: true' to
   the Webpack config, however you don't have access to this with the default Create React App setup without 'ejecting'
   which I don't want to do at this stage.
 - IE11 has no support for custom properties ('css variables'). In this case, I am not currently doing anything (although
-  I have plans) with runtime changes, so a Post CSS/Sass type setup could be used to compile at build time. I wont be
-  doing so because its just a demo... and the developer experience is so good - actually having these 'variables' to edit live right in dev tools.
+  I have plans) with runtime changes, so a Post CSS/Sass type setup could be used to compile at build time. But... the developer experience is just so good, actually having these 'variables' to edit live right in dev tools.
