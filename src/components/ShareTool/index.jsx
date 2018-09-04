@@ -60,7 +60,7 @@ class ShareTool extends Component {
     return !this.state.isShowing ? (
       <button className="ShareTool--open-button" onClick={this.showTool} />
     ) : (
-      <div className="modal" onClick={this.closeTool}>
+      <div className="ShareTool--modal" onClick={this.closeTool}>
         <section className="ShareTool--panel">
           <h3 className="ShareTool--title">Giphy embed URL:</h3>
           <textarea

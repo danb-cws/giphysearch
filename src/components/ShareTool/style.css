@@ -50,7 +50,7 @@
   font-size: 1.4em;
   margin-top: var(--primary-horizontal-gutter);
 }
-.modal {
+.ShareTool--modal {
   --modal-width: 54%;
   --modal-height: 17em;
   --modal-close-size: 2em;
@@ -65,7 +65,7 @@
   align-items: center;
   justify-content: center;
 }
-.modal:before {
+.ShareTool--modal:before {
   content: "";
   position: fixed;
   background-color: rgba(0, 4, 0, 0.8);
@@ -74,7 +74,7 @@
   right: 0;
   left: 0;
 }
-.modal:after {
+.ShareTool--modal:after {
   content: "";
   width: var(--modal-close-size);
   height: var(--modal-close-size);
@@ -89,7 +89,7 @@
   background-repeat: no-repeat;
   cursor: pointer;
 }
-.modal > * {
+.ShareTool--modal > * {
   z-index: 2;
   position: relative;
   width: var(--modal-width);
