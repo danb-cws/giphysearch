@@ -1,10 +1,15 @@
 import React from "react";
 import "./style.css";
 
-const welcomeMsg = (<section className="App-welcome">
-  <h2 className="App-welcome__title">Welcome to Giphysearch</h2>
-  <p className="App-welcome__body">Giphysearch is a React application that allows you to search the Giphy API within a fast and reactive interface.</p>
-</section>);
+const welcomeMsg = (
+  <section className="App-welcome">
+    <h2 className="App-welcome__title">Welcome to Giphysearch</h2>
+    <p className="App-welcome__body">
+      Giphysearch is a React application that allows you to search the Giphy API
+      within a fast and reactive interface.
+    </p>
+  </section>
+);
 
 const Header = ({ currentId }) => {
   return (
@@ -22,9 +27,7 @@ const Header = ({ currentId }) => {
           </a>
         </p>
       </header>
-      {currentId === undefined
-        ? welcomeMsg
-        : null}
+      {currentId === undefined ? welcomeMsg : null}
     </React.Fragment>
   );
 };
