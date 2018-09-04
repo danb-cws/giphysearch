@@ -3,6 +3,7 @@ import "./style.css";
 
 const Header = () => {
   return (
+    <React.Fragment>
     <header className="App-header">
       <h1 className="App-header__title">Giphysearch</h1>
       <p className="App-header__intro">
@@ -16,6 +17,10 @@ const Header = () => {
         </a>
       </p>
     </header>
+    <section className="App-welcome">
+      Welcome to Giphysearch
+    </section>
+    </React.Fragment>
   );
 };
 export default Header;
