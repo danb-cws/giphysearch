@@ -12,7 +12,7 @@ class ShareTool extends Component {
   };
 
   closeTool = e => {
-    if (e.target.classList.contains("modal")) {
+    if (e.target.classList.contains("ShareTool--modal")) {
       this.hideTool();
     }
   };
