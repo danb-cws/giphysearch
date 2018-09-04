@@ -9,13 +9,13 @@ import Browser from "./components/Browser/";
 
 class App extends Component {
   state = {
-    currentId: 0
+    currentId: undefined
   };
 
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header currentId={this.state.currentId} />
         <Browser
           onSetImageId={id => {
             this.setState({
