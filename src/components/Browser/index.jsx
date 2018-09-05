@@ -49,7 +49,7 @@ class Browser extends Component {
                 jsonIsLoaded: true
               },
               !gifs.length
-                ? this.props.onSetImageId(0)// shows 'no results' page*/
+                ? this.props.onSetImageId(0)// zero shows 'no results' page
                 : resultsPageIndex === 0 && !hasPaginated
                   ? this.props.onSetImageId(gifs[0].id) // select the first one if a new search
                   : null
