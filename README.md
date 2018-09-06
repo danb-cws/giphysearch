@@ -1,25 +1,28 @@
 # Giphysearch
 
-Giphysearch is a code demo which allows you to search the Giphy API within a super snappy UI.
-
 Hosted on Firebase: https://giphysearch-danb.firebaseapp.com/
+
+Giphysearch is a code demo and learning project which allows you to search the Giphy API within a super snappy UI.
 
 For this project, I wanted to just go with the default Create React App setup as opposed to spending ages setting up my own boilerplate, and to concentrate on implementing some some standard UI/frontend tasks in the 'React way'.  
 
 It's currently using the Giphy open beta API key which still seems to work, and removes the need to protect a private key in some way.
-(As in another gif-related project: https://github.com/danb-cws/giphyvision).
+(As in my other gif-related project: https://github.com/danb-cws/giphyvision).
+
+The app gets 100% PWA score in Lighthouse!
 
 
 ## I'm liking:
 
 - React 16.3 and the whole 'CRA' experience.
 - Prettier (with defaults) is a little strange first off but I have quickly grown to love it.
-- Grid is grrreat!
+- This is a great project to use with grid
 
 ## React
 
-- It's been 18 months or so since I had a look at React (it just wasn't a requirement in my last role) and I must say I have really enjoyed the experience of working with React 16.3, particularly 'object properties' style coding seems much more reasonable to me.
-- Gets 100% PWA score in Lighthouse!
+- It's been 18 months or so since I had a look at React (it just wasn't a requirement in my last role) and I have really enjoyed the improved experience of working with 16.3, particularly 'object properties' proposal and the 'terse' style of coding.
+- React.fragment is a welcome addition so as not to have to keep adding arbitrary wrappers.
+- I have some content in place for the 'pre-boot' of React, test with a throttled connection.
 
 ## CSS
 
