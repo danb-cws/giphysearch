@@ -1,10 +1,9 @@
 .App-header {
-  font-size: .9rem;
+  font-size: 0.9rem;
   padding: 0.9em 2em 0 2em;
   color: var(--light-default);
   background-color: var(--primary-bg-color);
 }
-
 .App-header__title {
   margin: 0;
   font-size: 2em;
@@ -13,23 +12,47 @@
 }
 .App-header__intro {
   font-size: 1em;
-  margin: .2em 0 0;
+  margin: 0.2em 0 0;
+}
+.App-welcome {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  color: var(--secondary-color-inverse);
+  background-color: var(--secondary-bg-color-inverse);
+  font-size: 1rem;
+}
+.App-welcome__title {
+  font-size: 8vw;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 0;
+}
+.App-welcome__body {
+  font-size: calc(7px + 2vw);
+  max-width: 78vw;
+  margin: 0.5em 0 0;
 }
 .github-link {
-    display: inline-block;
-    vertical-align: middle;
-    margin-left: .85em;
-    margin-top: -.25em;
-    text-indent: -999em;
-    overflow: hidden;
-    width: 1.5em;
-    height: 1.5em;
-    border: 1px solid var(--light-default);
-    border-radius: 50%;
-    background: var(--light-default) var(--github-logo-b64-url) no-repeat center center;
-    background-size: 1.5em;
-    transition: var(--default-transition);
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 0.85em;
+  margin-top: -0.25em;
+  text-indent: -999em;
+  overflow: hidden;
+  width: 1.5em;
+  height: 1.5em;
+  border: 1px solid var(--light-default);
+  border-radius: 50%;
+  background: var(--light-default) var(--github-logo-b64-url) no-repeat center
+    center;
+  background-size: 1.5em;
+  transition: var(--default-transition);
 }
 .github-link:hover {
-    transform: scale(1.3);
+  transform: scale(1.3);
 }
