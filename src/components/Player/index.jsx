@@ -5,10 +5,8 @@ import ShareTool from "../ShareTool/";
 import * as config from "config";
 import debounce from "debounce";
 
-// TODO: us prev props/state instead of localCurrId, set toggle on didmount to stop first render 'json'
-
 class Player extends Component {
-  state = { localCurrId: undefined, mainGif: {}, imageIsLoaded: undefined };
+  state = { mainGif: {}, imageIsLoaded: undefined };
 
   fetchPlayerImage = () => {
     fetch(
@@ -25,7 +23,6 @@ class Player extends Component {
       })
       .then(json => {
         this.setState({
-          localCurrId: this.props.currentId,
           mainGif: json.data,
           imageIsLoaded: false
         });
@@ -46,11 +43,11 @@ class Player extends Component {
     });
   };
 
-  componentDidUpdate() {
+  componentDidUpdate(prevProps) {
     if (
       this.props.currentId !== 0 && // ie. not 'no term' or 'no results'
-      this.props.currentId !== this.state.localCurrId // prevent the fetch on every render if id unchanged
-    ) {
+      this.props.currentId !== prevProps.currentId // prevent the fetch on every render if id unchanged
+  ) {
       this.debouncedFetch(this.props.currentId);
     }
   }
