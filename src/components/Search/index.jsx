@@ -33,7 +33,7 @@ class Search extends Component {
         <span className="Search__label">Search term</span>
         <input
           type="text"
-          autoFocus="true"
+          autoFocus={true}
           className="Search__input"
           value={this.state.searchTerm}
           onChange={e => this.onInputChange(e.target.value)}
