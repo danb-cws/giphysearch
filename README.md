@@ -20,9 +20,9 @@ The app gets 100% PWA score in Lighthouse!
 
 ## React
 
-- It's been 18 months or so since I had a look at React (it just wasn't a requirement in my last role) and I have really enjoyed the improved experience of working with 16.3, particularly 'object properties' proposal and the 'terse' style of coding.
+- It's been 18 months or so since I had a look at React (it just wasn't a requirement in my last role) and I have really enjoyed the improved experience of working with 16.3, particularly 'object properties' proposal and the generally 'terse' style of coding.
 - React.fragment is a welcome addition so as not to have to keep adding arbitrary wrappers.
-- I have some content in place for the 'pre-boot' of React, test with a throttled connection.
+- I have some content in place for the 'pre-boot' of React, test with a throttled connection to see.
 
 ## CSS
 
