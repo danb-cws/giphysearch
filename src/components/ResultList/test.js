@@ -1,10 +1,7 @@
 import React from "react";
-import { configure, shallow } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
+import { shallow } from "enzyme";
 import ResultList from "./";
 import testjson from "mock_json/gifsMock.json";
-
-configure({ adapter: new Adapter() });
 
 const el = shallow(
   <ResultList
