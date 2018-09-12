@@ -10,6 +10,14 @@ class Search extends Component {
     return nextState.searchTerm !== this.state.searchTerm;
   }
 
+  componentDidMount() {
+    if (this.state.searchTerm === "") {
+      this._input.focus();
+      return;
+    }
+    this.onInputChange(this.state.searchTerm); // if not empty, fire with initial default search term
+  }
+
   onInputChange = searchTerm => {
     this.setState({ searchTerm }); // dont want to debounce this as the controlled input gets laggy
     this.debouncedOnInputChange(searchTerm);
@@ -18,14 +26,6 @@ class Search extends Component {
   debouncedOnInputChange = debounce(searchTerm => {
     this.props.onSearchTermChange(searchTerm);
   }, 200);
-
-  componentDidMount() {
-    if (this.state.searchTerm === "") {
-      this._input.focus();
-      return;
-    }
-    this.onInputChange(this.state.searchTerm); // if not empty, fire with initial default search term
-  }
 
   render() {
     return (
