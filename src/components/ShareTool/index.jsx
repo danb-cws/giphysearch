@@ -71,7 +71,7 @@ class ShareTool extends Component {
           {document.queryCommandSupported("copy") && (
             <React.Fragment>
               <button
-                className="ShareTool--button"
+                className="ShareTool--copy-button"
                 onClick={this.copyToClipboard}
               >
                 Copy to clipboard
