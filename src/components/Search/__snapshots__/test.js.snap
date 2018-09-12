@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search tests Renders and matches snapshot 1`] = `
+<Search>
+  <label
+    className="Search"
+  >
+    <span
+      className="Search__label"
+    >
+      Search term
+    </span>
+    <input
+      autoFocus={true}
+      className="Search__input"
+      onChange={[Function]}
+      type="text"
+      value=""
+    />
+  </label>
+</Search>
+`;
