@@ -1,5 +1,16 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`ShareTool tests Can be closed 1`] = `
+<ShareTool
+  shareUrl="https://giphy.com/embed/3ohc1f1vrhZsufbBcI"
+>
+  <button
+    className="ShareTool--open-button"
+    onClick={[Function]}
+  />
+</ShareTool>
+`;
+
 exports[`ShareTool tests Copies to clipboard 1`] = `
 <ShareTool
   shareUrl="https://giphy.com/embed/3ohc1f1vrhZsufbBcI"
