@@ -1,0 +1,8 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ShareTool tests Renders and matches snapshot 1`] = `
+<button
+  className="ShareTool--open-button"
+  onClick={[Function]}
+/>
+`;
