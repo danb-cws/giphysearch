@@ -1,8 +1,78 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`ShareTool tests Renders and matches snapshot 1`] = `
+exports[`ShareTool tests Copies to clipboard 1`] = `
+<ShareTool
+  shareUrl="https://giphy.com/embed/3ohc1f1vrhZsufbBcI"
+>
+  <div
+    className="ShareTool--modal"
+    onClick={[Function]}
+  >
+    <section
+      className="ShareTool--panel"
+    >
+      <h3
+        className="ShareTool--title"
+      >
+        Giphy embed URL:
+      </h3>
+      <textarea
+        className="ShareTool--textarea"
+        defaultValue="https://giphy.com/embed/3ohc1f1vrhZsufbBcI"
+      />
+      <button
+        className="ShareTool--copy-button"
+        onClick={[Function]}
+      >
+        Copy to clipboard
+      </button>
+      <div
+        className="ShareTool--copy-success"
+      >
+        Copied!
+      </div>
+    </section>
+  </div>
+</ShareTool>
+`;
+
+exports[`ShareTool tests Renders and matches snapshot (closed state) 1`] = `
 <button
   className="ShareTool--open-button"
   onClick={[Function]}
 />
+`;
+
+exports[`ShareTool tests Renders and matches snapshot (open state) 1`] = `
+<ShareTool
+  shareUrl="https://giphy.com/embed/3ohc1f1vrhZsufbBcI"
+>
+  <div
+    className="ShareTool--modal"
+    onClick={[Function]}
+  >
+    <section
+      className="ShareTool--panel"
+    >
+      <h3
+        className="ShareTool--title"
+      >
+        Giphy embed URL:
+      </h3>
+      <textarea
+        className="ShareTool--textarea"
+        defaultValue="https://giphy.com/embed/3ohc1f1vrhZsufbBcI"
+      />
+      <button
+        className="ShareTool--copy-button"
+        onClick={[Function]}
+      >
+        Copy to clipboard
+      </button>
+      <div
+        className="ShareTool--copy-success"
+      />
+    </section>
+  </div>
+</ShareTool>
 `;
