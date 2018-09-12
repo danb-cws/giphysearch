@@ -33,7 +33,7 @@
   resize: none;
   margin-bottom: 1em;
 }
-.ShareTool--button {
+.ShareTool--copy-button {
   border-radius: 0;
   padding: var(--primary-horizontal-gutter) var(--primary-vertical-gutter);
   margin: 0;
