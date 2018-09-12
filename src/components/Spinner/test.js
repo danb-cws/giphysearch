@@ -1,12 +1,10 @@
 import React from "react";
 import { shallow } from "enzyme";
-import renderer from "react-test-renderer";
 import Spinner from "./";
 
 describe("Spinner tests", () => {
   it("Renders and matches snapshot", () => {
-    const tree = renderer.create(<Spinner showSpinner={true} />)
-    .toJSON();
+    const tree = shallow(<Spinner showSpinner={true} />);
     expect(tree).toMatchSnapshot();
   });
 
