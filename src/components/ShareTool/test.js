@@ -46,5 +46,14 @@ describe("ShareTool tests", () => {
     tree.find("button.ShareTool--open-button").simulate("click");
     tree.find("button.ShareTool--copy-button").simulate("click");
     expect(tree).toMatchSnapshot();
+    expect(tree.state("copySuccess")).toEqual("Copied!");
+  });
+
+  it("Can be closed", () => {
+    const tree = mount(<ShareTool shareUrl={testjson.embed_url} />);
+    tree.setState({ isShowing: true });
+    tree.find("div.ShareTool--modal").simulate("click");
+    expect(tree).toMatchSnapshot();
+    expect(tree.state("copySuccess")).toEqual("");
   });
 });
