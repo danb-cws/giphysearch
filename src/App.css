@@ -4,7 +4,7 @@
     display: grid;
     grid-template-rows: 1fr var(--result-list-height) var(--header-height);
     grid-template-columns: 1fr auto;
-    height: 100%;
+    min-height: 100%;
     width: 100%;
   }
 
