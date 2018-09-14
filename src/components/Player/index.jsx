@@ -23,8 +23,7 @@ class Player extends Component {
       })
       .then(json => {
         this.setState({
-          mainGif: json.data,
-          imageIsLoaded: false
+          mainGif: json.data
         });
       })
       .catch(() => console.error);
@@ -43,17 +42,26 @@ class Player extends Component {
     });
   };
 
+  shouldComponentUpdate(nextProps) {
+    return (nextProps.currentId !== this.props.currentId) || this.isEmpty(this.state.mainGif) || !this.state.imageIsLoaded;
+  }
+
   componentDidUpdate(prevProps) {
     if (
       this.props.currentId !== 0 && // ie. not 'no term' or 'no results'
       this.props.currentId !== prevProps.currentId // prevent the fetch on every render if id unchanged
-  ) {
+    ) {
       this.debouncedFetch(this.props.currentId);
     }
   }
 
   debouncedFetch = debounce(id => {
-    this.fetchPlayerImage(id);
+    this.setState(
+      {
+        imageIsLoaded: false
+      },
+      this.fetchPlayerImage(id)
+    );
   }, 400);
 
   render() {
