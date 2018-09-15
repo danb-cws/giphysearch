@@ -18,7 +18,8 @@ class Player extends Component {
         if (response.ok) {
           return response.json();
         } else {
-          throw new Error(response.statusText);
+          //throw new Error(response.statusText);
+          console.warn('died! ',response.statusText);
         }
       })
       .then(json => {
@@ -42,10 +43,6 @@ class Player extends Component {
     });
   };
 
-  shouldComponentUpdate(nextProps) {
-    return (nextProps.currentId !== this.props.currentId) || this.isEmpty(this.state.mainGif) || !this.state.imageIsLoaded;
-  }
-
   componentDidUpdate(prevProps) {
     if (
       this.props.currentId !== 0 && // ie. not 'no term' or 'no results'
@@ -58,6 +55,7 @@ class Player extends Component {
   debouncedFetch = debounce(id => {
     this.setState(
       {
+        mainGif: {},
         imageIsLoaded: false
       },
       this.fetchPlayerImage(id)
@@ -66,24 +64,27 @@ class Player extends Component {
 
   render() {
     const { mainGif, imageIsLoaded } = this.state;
-    if (this.props.currentId === 0) {
+    if (this.props.currentId === (0 || undefined)) {
       return null;
-    }
-    if (this.isEmpty(mainGif)) {
-      return <div className="Player">Loading json...</div>;
-    }
-    return (
-      <div className="Player">
-        <Spinner showSpinner={!imageIsLoaded} />
-        <ShareTool shareUrl={mainGif.embed_url} />
-        <img
-          className="Player--img"
-          src={mainGif.images.downsized.url}
-          alt={mainGif.title}
-          onLoad={this.hideSpinner}
-        />
-      </div>
-    );
+    } else
+      return (
+        <div className="Player">
+          <Spinner showSpinner={!imageIsLoaded} />
+          {this.isEmpty(mainGif) ? (
+            "Loading json..."
+          ) : (
+            <React.Fragment>
+              <ShareTool shareUrl={mainGif.embed_url} />
+              <img
+                className="Player--img"
+                src={mainGif.images.downsized.url}
+                alt={mainGif.title}
+                onLoad={this.hideSpinner}
+              />
+            </React.Fragment>
+          )}
+        </div>
+      );
   }
 }
 
