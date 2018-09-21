@@ -1,8 +1,13 @@
 import React from "react";
 import { shallow } from "enzyme";
 import ErrorScreen from "./";
+import Spinner from "../Spinner";
 
 describe("ErrorScreen tests", () => {
+  it("Renders and matches snapshot", () => {
+    const tree = shallow(<ErrorScreen gifs={[]} searchTerm={"test term"} jsonIsLoaded={true} />);
+    expect(tree).toMatchSnapshot();
+  });
 
   it("Responds with 'please enter term' if no gifs and json has loaded", function() {
     expect(

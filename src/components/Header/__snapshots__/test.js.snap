@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header tests Renders and matches snapshot 1`] = `
+<Fragment>
+  <header
+    className="App-header"
+  >
+    <h1
+      className="App-header__title"
+    >
+      Giphysearch
+    </h1>
+    <p
+      className="App-header__intro"
+    >
+      A code demo by Dan B
+      <a
+        className="github-link"
+        href="https://github.com/danb-cws/giphysearch"
+        title="Github link"
+      >
+        Github
+      </a>
+    </p>
+  </header>
+  <section
+    className="App-welcome"
+  >
+    <h2
+      className="App-welcome__title"
+    >
+      Giphysearch
+    </h2>
+    <p
+      className="App-welcome__body"
+    >
+      ...is a React application that allows you to search the Giphy API within a fast and reactive interface.
+    </p>
+    <p
+      className="App-welcome__body"
+    >
+      To get started, enter a term in the search field.
+    </p>
+  </section>
+</Fragment>
+`;
