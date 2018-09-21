@@ -1,7 +1,6 @@
 import React from "react";
 import { shallow } from "enzyme";
 import ErrorScreen from "./";
-import Spinner from "../Spinner";
 
 describe("ErrorScreen tests", () => {
   it("Renders and matches snapshot", () => {
@@ -14,9 +13,9 @@ describe("ErrorScreen tests", () => {
       shallow(
         <ErrorScreen gifs={[]} searchTerm={""} jsonIsLoaded={true} />
       ).contains(
-        <div className="ErrorScreen">
+        <section className="ErrorScreen">
           Please enter a term in the search field
-        </div>
+        </section>
       )
     ).toBe(true);
   });
@@ -26,7 +25,7 @@ describe("ErrorScreen tests", () => {
       shallow(
         <ErrorScreen gifs={[]} searchTerm={"testTerm"} jsonIsLoaded={true} />
       ).contains(
-        <div className="ErrorScreen">No gifs available for "testTerm"</div>
+        <section className="ErrorScreen">No gifs available for "testTerm"</section>
       )
     ).toBe(true);
   });

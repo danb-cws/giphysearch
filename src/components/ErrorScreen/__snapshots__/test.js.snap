@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`ErrorScreen tests Renders and matches snapshot 1`] = `
-<div
+<section
   className="ErrorScreen"
 >
   No gifs available for "test term"
-</div>
+</section>
 `;

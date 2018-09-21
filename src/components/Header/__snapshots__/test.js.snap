@@ -34,7 +34,7 @@ exports[`Header tests Renders and matches snapshot 1`] = `
     <p
       className="App-welcome__body"
     >
-      ...is a React application that allows you to search the Giphy API within a fast and reactive interface.
+      ...is a React application that allows you to search the Giphy API within a slick and snappy interface.
     </p>
     <p
       className="App-welcome__body"
