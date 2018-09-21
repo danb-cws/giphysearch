@@ -14,7 +14,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <React.Fragment>
         <Header currentId={this.state.currentId} />
         <Browser
           onSetImageId={id => {
@@ -24,7 +24,7 @@ class App extends Component {
           }}
         />
         <Player currentId={this.state.currentId} />
-      </div>
+      </React.Fragment>
     );
   }
 }

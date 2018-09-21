@@ -1,5 +1,5 @@
 @supports (display: grid) {
-  .App {
+  #App {
     text-align: center;
     display: grid;
     grid-template-rows: 1fr var(--result-list-height) var(--header-height);
@@ -19,7 +19,7 @@
   }
 
   @media screen and (orientation: portrait) {
-    .App {
+    #App {
       grid-template-rows:
         1fr calc(2 * var(--result-list-height)) var(--header-height)
         var(--header-height);
