@@ -2,7 +2,7 @@
 
 Hosted on Firebase: https://giphysearch-danb.firebaseapp.com/
 
-Giphysearch is a code demo and learning project which allows you to search the Giphy API within a super snappy UI.
+Giphysearch is a code demo and learning project which allows you to search the Giphy API within a slick and snappy UI.
 
 For this project, I wanted to just go with the default Create React App setup as opposed to spending ages setting up my own boilerplate, and to concentrate on implementing some some standard UI/frontend tasks in the 'React way'.  
 
