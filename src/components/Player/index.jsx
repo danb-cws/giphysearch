@@ -68,7 +68,7 @@ class Player extends Component {
       return null;
     } else
       return (
-        <div className="Player">
+        <section className="Player">
           <Spinner showSpinner={!imageIsLoaded} />
           {this.isEmpty(mainGif) ? (
             "Loading json..."
@@ -83,7 +83,7 @@ class Player extends Component {
               />
             </React.Fragment>
           )}
-        </div>
+        </section>
       );
   }
 }

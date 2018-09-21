@@ -6,7 +6,7 @@ const welcomeMsg = (
     <h2 className="App-welcome__title">Giphysearch</h2>
     <p className="App-welcome__body">
       ...is a React application that allows you to search the Giphy API
-      within a fast and reactive interface.
+      within a slick and snappy interface.
     </p>
     <p className="App-welcome__body">
       To get started, enter a term in the search field.
