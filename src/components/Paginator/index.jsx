@@ -11,7 +11,7 @@ const Paginator = props => {
         props.totalResults / config.RESULTS_PER_PAGE);
   return (
     <button
-      className={"Paginator"}
+      className="Paginator"
       disabled={isDisabled}
       onClick={() => {
         props.onPaginate(props.dir);
