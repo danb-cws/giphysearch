@@ -11,7 +11,7 @@ const elSelected = shallow(
     selectedItemIndex={config.RESULTS_PER_PAGE + 2}
     index={2}
     resultsPageIndex={1}
-    onItemSelect={itemClick}
+    //onItemSelect={testjson.id}
     ChildNodeName={"li"}
   />
 );
