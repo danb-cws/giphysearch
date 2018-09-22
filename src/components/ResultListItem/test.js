@@ -6,29 +6,15 @@ import * as config from "config";
 
 const elSelected = shallow(
   <ResultListItem
+    key={testjson.id}
     gif={testjson}
     selectedItemIndex={config.RESULTS_PER_PAGE + 2}
     index={2}
     resultsPageIndex={1}
-    onItemSelect={() => {
-      return true;
-    }}
+    onItemSelect={itemClick}
     ChildNodeName={"li"}
   />
 );
-
-/*const elUnselected = shallow(
-  <ResultListItem
-    gif={testjson}
-    selectedItemIndex={config.RESULTS_PER_PAGE + 2}
-    index={3}
-    resultsPageIndex={1}
-    onItemSelect={() => {
-      return true;
-    }}
-    ChildNodeName={"li"}
-  />
-);*/
 
 describe("ResultListItem tests", () => {
   it("Renders the component", () => {
@@ -46,13 +32,5 @@ describe("ResultListItem tests", () => {
         .hasClass("ResultList--item--link__selected-item")
     ).toBe(true);
   });
-
-/* TODO revisit this */
-
-/*  it("Actions click on item", () => {
-    expect(
-      elUnselected.find(".ResultList--item--link").simulate("click", { preventDefault(){} })
-    ).toBeTruthy();
-  });*/
 
 });
