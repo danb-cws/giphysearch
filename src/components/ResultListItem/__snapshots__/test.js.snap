@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultListItem tests Matches snapshot 1`] = `
+<li
+  className="ResultList--item"
+>
+  <a
+    className="ResultList--item--link ResultList--item--link__selected-item"
+    href="https://media1.giphy.com/media/3ohc1f1vrhZsufbBcI/100_s.gif?cid=e1bb72ff5b6c7ba658534741452ec414"
+    onClick={[Function]}
+  >
+    <img
+      alt="mr blobby 90s GIF by ladypat"
+      className="ResultList--item--img"
+      src="https://media1.giphy.com/media/3ohc1f1vrhZsufbBcI/100_s.gif?cid=e1bb72ff5b6c7ba658534741452ec414"
+    />
+    <h5
+      className="ResultList--item--title"
+    >
+      mr blobby 90s GIF by ladypat
+    </h5>
+  </a>
+</li>
+`;
