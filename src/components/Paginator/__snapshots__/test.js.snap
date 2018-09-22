@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Paginator tests Matches snapshot 1`] = `
+<button
+  className="Paginator"
+  disabled={false}
+  onClick={[Function]}
+>
+  <span
+    className="Paginator__label Paginator__label--fwd"
+  >
+    Next
+  </span>
+</button>
+`;
