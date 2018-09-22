@@ -18,8 +18,8 @@
   color: var(--control-color-hover);
   background-color: var(--control-bg-color-hover);
 }
-.Paginator__disabled,
-.Paginator__disabled:hover {
+.Paginator:disabled,
+.Paginator:disabled:hover {
   color: var(--control-disabled-color);
   background-color: var(--control-disabled-bg-color);
   cursor: default;
