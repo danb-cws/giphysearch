@@ -8,4 +8,7 @@ describe("Player tests", () => {
   it("Renders the Player component", () => {
     expect(el.exists()).toBe(true);
   });
+  it("Matches snapshot", () => {
+    expect(el).toMatchSnapshot();
+  });
 });

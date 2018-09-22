@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Browser tests Matches snapshot 1`] = `
+<Fragment>
+  <Search
+    onSearchTermChange={[Function]}
+  />
+  <ResultList
+    gifs={Array []}
+    onItemSelect={[Function]}
+    onPaginate={[Function]}
+    resultsPageIndex={0}
+    selectedItemIndex={0}
+    totalResults={0}
+  />
+  <ErrorScreen
+    gifs={Array []}
+    isOnline={true}
+    jsonIsLoaded={true}
+    searchTerm=""
+  />
+</Fragment>
+`;

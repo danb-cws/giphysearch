@@ -35,6 +35,10 @@ describe("ResultListItem tests", () => {
     expect(elSelected.exists()).toBe(true);
   });
 
+  it("Matches snapshot", () => {
+    expect(elSelected).toMatchSnapshot();
+  });
+
   it("Correctly adds class to the selected item", () => {
     expect(
       elSelected

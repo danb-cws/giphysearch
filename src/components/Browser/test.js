@@ -16,4 +16,7 @@ describe("Browser tests", () => {
   it("Renders the Browser component", () => {
     expect(el.exists()).toBe(true);
   });
+  it("Matches snapshot", () => {
+    expect(el).toMatchSnapshot();
+  });
 });

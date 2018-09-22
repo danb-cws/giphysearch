@@ -38,4 +38,7 @@ describe("ResultList tests", () => {
   it("Renders the ResultList component", () => {
     expect(el.exists()).toBe(true);
   });
+  it("Matches snapshot", () => {
+    expect(el).toMatchSnapshot();
+  });
 });

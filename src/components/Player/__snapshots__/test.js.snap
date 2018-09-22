@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Player tests Matches snapshot 1`] = `
+<section
+  className="Player"
+>
+  <Spinner
+    showSpinner={true}
+  />
+  Loading json...
+</section>
+`;
