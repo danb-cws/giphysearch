@@ -60,16 +60,16 @@ describe("Paginator tests", () => {
     el.simulate("click", { paginatorClick });
     expect(paginatorClick).toBeCalled();
   });
-  it("`Next` Paginator should not have disabled class on paginator if enough results for another page", () => {
-    expect(el.hasClass("Paginator__disabled")).toBe(false);
+  it("`Next` Paginator should not have disabled attrib on paginator if enough results for another page", () => {
+    expect(el.find('[disabled]').prop('disabled')).not.toBeTruthy();
   });
-  it("`Next` Paginator should have disabled class on  paginator if not enough results for another page", () => {
-    expect(elDisabledNext.hasClass("Paginator__disabled")).toBe(true);
+  it("`Next` Paginator should have disabled attrib on  paginator if not enough results for another page", () => {
+    expect(elDisabledNext.find('[disabled]').prop('disabled')).toBeTruthy();
   });
   it("`Prev` Paginator should not have disabled class on paginator if not on first page", () => {
-    expect(elSecondPage.hasClass("Paginator__disabled")).toBe(false);
+    expect(elSecondPage.find('[disabled]').prop('disabled')).not.toBeTruthy();
   });
   it("`Prev` Paginator should have disabled class on paginator if on first page", () => {
-    expect(elFirstPage.hasClass("Paginator__disabled")).toBe(true);
+    expect(elFirstPage.find('[disabled]').prop('disabled')).toBeTruthy();
   });
 });
