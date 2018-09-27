@@ -13,6 +13,7 @@ class ShareTool extends Component {
 
   closeTool = e => {
     if (e.target.classList.contains("ShareTool--modal")) {
+      e.preventDefault();
       this.hideTool();
     }
   };
@@ -60,7 +61,13 @@ class ShareTool extends Component {
     return !this.state.isShowing ? (
       <button className="ShareTool--open-button" onClick={this.showTool} />
     ) : (
-      <div className="ShareTool--modal" onClick={this.closeTool}>
+      <div
+        className="ShareTool--modal"
+        role="button"
+        tabIndex="0"
+        onClick={this.closeTool}
+        onKeyPress={this.closeTool}
+      >
         <section className="ShareTool--panel">
           <h3 className="ShareTool--title">Giphy embed URL:</h3>
           <textarea
