@@ -18,6 +18,9 @@ exports[`ShareTool tests Copies to clipboard 1`] = `
   <div
     className="ShareTool--modal"
     onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex="0"
   >
     <section
       className="ShareTool--panel"
@@ -61,6 +64,9 @@ exports[`ShareTool tests Renders and matches snapshot (open state) 1`] = `
   <div
     className="ShareTool--modal"
     onClick={[Function]}
+    onKeyPress={[Function]}
+    role="button"
+    tabIndex="0"
   >
     <section
       className="ShareTool--panel"
