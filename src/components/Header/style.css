@@ -1,7 +1,7 @@
 .App-header {
   font-size: 0.9rem;
   padding: 0.9em 1.4em;
-  color: var(--primary-bg-color-inverse);
+  color: var(--secondary-color);
   background-color: var(--primary-bg-color);
 }
 .App-header__title {
