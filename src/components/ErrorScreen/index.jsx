@@ -2,7 +2,9 @@ import React from "react";
 import "./style.css";
 
 const ErrorScreen = props => {
-  if (props.gifs.length === 0 && props.jsonIsLoaded) {
+  if (!props.isOnline) {
+    return <section className="ErrorScreen">No data connection</section>;
+  } else if (props.gifs.length === 0 && props.jsonIsLoaded) {
     return (
       <section className="ErrorScreen">
         {!props.searchTerm
@@ -10,8 +12,6 @@ const ErrorScreen = props => {
           : `No gifs available for "${props.searchTerm}"`}
       </section>
     );
-  } else if (!props.isOnline) {
-    return <section className="ErrorScreen">No data connection</section>;
   } else {
     return null;
   }
