@@ -1,4 +1,4 @@
-.ResultList {
+.Result-list {
   font-size: 1rem;
   display: flex;
   justify-content: space-between;
@@ -6,7 +6,7 @@
   padding: var(--secondary-vertical-gutter) 0;
 }
 
-.ResultList--list {
+.Result-list__list {
   display: flex;
   flex-wrap: wrap;
   width: calc(100% - (2 * var(--pagination-button-width)));
@@ -14,7 +14,7 @@
   margin: 0 0 0 var(--secondary-horizontal-gutter);
   padding: 0;
 }
-.ResultList--no-results {
+.Result-list--no-results {
   color: var(--light-default);
   background-color: var(--primary-bg-color-inverse);
   display: flex;

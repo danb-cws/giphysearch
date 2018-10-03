@@ -3,10 +3,10 @@ import "./style.css";
 
 const ErrorScreen = props => {
   if (!props.isOnline) {
-    return <section className="ErrorScreen">No data connection</section>;
+    return <section className="Error-screen">No data connection</section>;
   } else if (props.gifs.length === 0 && props.jsonIsLoaded) {
     return (
-      <section className="ErrorScreen">
+      <section className="Error-screen">
         {!props.searchTerm
           ? "Please enter a term in the search field"
           : `No gifs available for "${props.searchTerm}"`}

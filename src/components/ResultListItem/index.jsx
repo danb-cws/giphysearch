@@ -13,13 +13,13 @@ const ResultListItem = ({
   const dataIndex = resultsPageIndex * config.RESULTS_PER_PAGE + index;
 
   return (
-    <ChildNodeName className="ResultList--item">
+    <ChildNodeName className="Result-list__item">
       <a
         href={gif.images.fixed_height_small_still.url}
         className={
           selectedItemIndex === dataIndex
-            ? "ResultList--item--link ResultList--item--link__selected-item"
-            : "ResultList--item--link"
+            ? "Result-list__item__link Result-list__item__link--selected-item"
+            : "Result-list__item__link"
         }
         onClick={e => {
           e.preventDefault();
@@ -30,11 +30,11 @@ const ResultListItem = ({
         }}
       >
         <img
-          className="ResultList--item--img"
+          className="Result-list__item__img"
           src={gif.images.fixed_height_small_still.url}
           alt={gif.title || ''}
         />
-        <h5 className="ResultList--item--title">{gif.title || "(No title)"}</h5>
+        <h5 className="Result-list__item__title">{gif.title || "(No title)"}</h5>
       </a>
     </ChildNodeName>
   );

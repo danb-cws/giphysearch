@@ -18,7 +18,7 @@ const ResultList = props => {
     );
   });
   return (
-    <section className="ResultList">
+    <section className="Result-list">
       <Paginator
         onPaginate={props.onPaginate}
         totalResults={props.totalResults}
@@ -27,11 +27,11 @@ const ResultList = props => {
       >
         Prev
       </Paginator>
-      <ul className="ResultList--list">
+      <ul className="Result-list__list">
         {resultItems.length ? (
           resultItems
         ) : (
-          <li className="ResultList--no-results">No results</li>
+          <li className="Result-list--no-results">No results</li>
         )}
       </ul>
       <Paginator
