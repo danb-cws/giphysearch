@@ -2,20 +2,20 @@
 
 exports[`ResultListItem tests Matches snapshot 1`] = `
 <li
-  className="ResultList--item"
+  className="Result-list__item"
 >
   <a
-    className="ResultList--item--link ResultList--item--link__selected-item"
+    className="Result-list__item__link Result-list__item__link--selected-item"
     href="https://media1.giphy.com/media/3ohc1f1vrhZsufbBcI/100_s.gif?cid=e1bb72ff5b6c7ba658534741452ec414"
     onClick={[Function]}
   >
     <img
       alt="mr blobby 90s GIF by ladypat"
-      className="ResultList--item--img"
+      className="Result-list__item__img"
       src="https://media1.giphy.com/media/3ohc1f1vrhZsufbBcI/100_s.gif?cid=e1bb72ff5b6c7ba658534741452ec414"
     />
     <h5
-      className="ResultList--item--title"
+      className="Result-list__item__title"
     >
       mr blobby 90s GIF by ladypat
     </h5>

@@ -28,8 +28,8 @@ describe("ResultListItem tests", () => {
   it("Correctly adds class to the selected item", () => {
     expect(
       elSelected
-        .find(".ResultList--item--link")
-        .hasClass("ResultList--item--link__selected-item")
+        .find(".Result-list__item__link")
+        .hasClass("Result-list__item__link--selected-item")
     ).toBe(true);
   });
 

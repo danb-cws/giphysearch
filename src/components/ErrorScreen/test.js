@@ -13,7 +13,7 @@ describe("ErrorScreen tests", () => {
       shallow(
         <ErrorScreen gifs={[]} searchTerm={""} jsonIsLoaded={true} />
       ).contains(
-        <section className="ErrorScreen">
+        <section className="Error-screen">
           Please enter a term in the search field
         </section>
       )
@@ -25,7 +25,7 @@ describe("ErrorScreen tests", () => {
       shallow(
         <ErrorScreen gifs={[]} searchTerm={"testTerm"} jsonIsLoaded={true} />
       ).contains(
-        <section className="ErrorScreen">No gifs available for "testTerm"</section>
+        <section className="Error-screen">No gifs available for "testTerm"</section>
       )
     ).toBe(true);
   });

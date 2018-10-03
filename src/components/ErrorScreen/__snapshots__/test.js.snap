@@ -2,7 +2,7 @@
 
 exports[`ErrorScreen tests Renders and matches snapshot 1`] = `
 <section
-  className="ErrorScreen"
+  className="Error-screen"
 >
   No gifs available for "test term"
 </section>

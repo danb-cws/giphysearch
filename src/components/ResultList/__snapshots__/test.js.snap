@@ -2,7 +2,7 @@
 
 exports[`ResultList tests Matches snapshot 1`] = `
 <section
-  className="ResultList"
+  className="Result-list"
 >
   <Paginator
     dir={-1}
@@ -13,7 +13,7 @@ exports[`ResultList tests Matches snapshot 1`] = `
     Prev
   </Paginator>
   <ul
-    className="ResultList--list"
+    className="Result-list__list"
   >
     <ResultListItem
       ChildNodeName="li"
