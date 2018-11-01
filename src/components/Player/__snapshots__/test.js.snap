@@ -5,8 +5,16 @@ exports[`Player tests Matches snapshot 1`] = `
   className="Player"
 >
   <Spinner
-    showSpinner={true}
+    showSpinner={false}
   />
-  Loading json...
+  <ShareTool
+    shareUrl="https://giphy.com/embed/3ohc1f1vrhZsufbBcI"
+  />
+  <img
+    alt="mr blobby 90s GIF by ladypat"
+    className="Player--img"
+    onLoad={[Function]}
+    src="https://media1.giphy.com/media/3ohc1f1vrhZsufbBcI/giphy-downsized.gif?cid=e1bb72ff5b6c7ba658534741452ec414"
+  />
 </section>
 `;
