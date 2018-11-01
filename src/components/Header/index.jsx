@@ -14,7 +14,7 @@ const welcomeMsg = (
   </section>
 );
 
-const Header = ({ currentId }) => {
+const Header = ({ currentChoiceData }) => {
   return (
     <React.Fragment>
       <header className="App-header">
@@ -30,7 +30,7 @@ const Header = ({ currentId }) => {
           </a>
         </p>
       </header>
-      {currentId === undefined ? welcomeMsg : null}
+      {currentChoiceData === undefined ? welcomeMsg : null}
     </React.Fragment>
   );
 };
