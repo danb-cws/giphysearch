@@ -9,21 +9,21 @@ import Browser from "./components/Browser/";
 
 class App extends Component {
   state = {
-    currentId: undefined
+    currentChoiceData: undefined
   };
 
   render() {
     return (
       <React.Fragment>
-        <Header currentId={this.state.currentId} />
+        <Header currentChoiceData={this.state.currentChoiceData} />
         <Browser
-          onSetImageId={id => {
+          onSetImageData={gif => {
             this.setState({
-              currentId: id
+              currentChoiceData: gif
             });
           }}
         />
-        <Player currentId={this.state.currentId} />
+        <Player currentChoiceData={this.state.currentChoiceData} />
       </React.Fragment>
     );
   }
