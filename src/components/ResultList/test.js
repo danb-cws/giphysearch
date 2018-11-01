@@ -9,14 +9,14 @@ const el = shallow(
     selectedItemIndex={1}
     totalResults={999}
     resultsPageIndex={2}
-    onItemSelect={(index, giphyId) => {
+    onItemSelect={(index, currentChoiceData) => {
       this.setState(
         {
           selectedItemIndex: index,
-          currentId: giphyId
+          currentChoiceData: currentChoiceData
         },
         () => {
-          this.props.onSetImageId(giphyId);
+          this.props.onSetImageId(currentChoiceData);
         }
       );
     }}
