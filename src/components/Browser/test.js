@@ -4,9 +4,9 @@ import Browser from "./";
 
 const el = shallow(
   <Browser
-    onSetImageId={id => {
+    onSetImageData={gif => {
       this.setState({
-        currentId: id
+        currentChoiceData: gif
       });
     }}
   />
