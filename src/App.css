@@ -10,8 +10,8 @@
 
   .nocandu,
   #App-loading {
-    grid-row: 1 / 3;
-    grid-column: 1 / 2;
+    grid-row: 1 / 4;
+    grid-column: 1 / 4;
   }
 
   .App-header {
