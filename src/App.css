@@ -31,6 +31,12 @@
         var(--header-height);
     }
 
+    .nocandu,
+    #App-loading {
+      grid-row: 1 / 5;
+      grid-column: 1 / 5;
+    }
+
     .App-header {
       grid-row: 4;
       grid-column: 1 / 3;
