@@ -27,10 +27,14 @@ class Browser extends Component {
           `${config.GIPHY_ENDPOINT}search?q=${encodeURI(searchTerm)}&api_key=${
             config.GIPHY_API_KEY
           }&limit=${config.RESULTS_PER_PAGE}&offset=${resultsPageIndex *
-            config.RESULTS_PER_PAGE}&rating=pg-13`
-        ,{
-          mode: 'no-cors'
-        })
+            config.RESULTS_PER_PAGE}&rating=pg-13`,
+          {
+            mode: "cors"
+          },
+          {
+            withCredentials: false
+          }
+        )
           .then(response => {
             if (response.ok) {
               return response.json();

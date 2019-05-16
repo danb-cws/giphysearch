@@ -1,5 +1,4 @@
 # Giphysearch
-## Broken :( - Need to fix CORS errors from Giphy
 
 Hosted on Firebase: https://giphysearch-danb.firebaseapp.com/
 
